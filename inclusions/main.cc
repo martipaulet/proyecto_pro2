@@ -15,6 +15,7 @@
 #include "SesionSet.hh"
 #include "CourseSet.hh"
 #include "UserSet.hh"
+
 using namespace std;
 
 
@@ -64,7 +65,7 @@ int main() {
     comandos["problemas_enviables"] = PROBLEMAS_ENVIABLES;
     comandos["pe"]                  = PROBLEMAS_ENVIABLES;
     comandos["envio"]               = ENVIO;
-    comandos["e"]                   = ENVIO:
+    comandos["e"]                   = ENVIO;
     comandos["listar_problemas"]    = LISTAR_PROBLEMAS;
     comandos["lp"]                  = LISTAR_PROBLEMAS;
     comandos["escribir_problema"]   = ESCRIBIR_PROBLEMA;
@@ -288,7 +289,7 @@ int main() {
                     
                 case ESCRIBIR_USUARIO:
                     cin >> u;
-                    if (usuarios.ListUser(u))
+                    if (usuarios.ListUser(u) == -1)
                         cout << "Error, el usuario " << u << " no existe." << endl; 
                     break;
                     

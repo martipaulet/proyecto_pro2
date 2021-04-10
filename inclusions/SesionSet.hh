@@ -105,7 +105,7 @@ public:
         \pre El string id_sesion no es vacío.
         \post Si la sesión con id = id_sesion del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (num_problemas + id de dichos problemas) de esta. Retornará -1 en caso contrario.
     */
-    void ListSesion(string id_sesion);
+    int ListSesion(string id_sesion);
     
     /** @brief Operación de escritura.
         \pre La sesion con id_sesion tiene un BinTree de strings de id_problemas.

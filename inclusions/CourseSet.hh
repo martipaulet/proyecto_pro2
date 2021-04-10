@@ -68,7 +68,7 @@ public:
         \pre El int id_curso y el problema id_problema no són vacíos.
         \post Busca en el parámetro implícito el curso cond id = id_curso y si lo encuentra retorna la sesión en la que se encuentra el problema con id = id_problema en el curso id_curso.
     */
-    void GetSesion(int id_curso, string id_problema) const;
+    int GetSesion(int id_curso, string id_problema) const;
     
     
     
@@ -129,7 +129,7 @@ public:
         \post Si el curso con id = id_curso del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (num_usuarios_completados, num_usuarios_inscritos, num_sesiones + id_sesiones de estas en el        
                 orden que se creó el curso) de este. Retornará -1 en caso contrario.
     */
-    void ListCourse (int id_curso);
+    int ListCourse (int id_curso);
     
 private:
     vector<Course> Course_vec;

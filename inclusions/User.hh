@@ -5,6 +5,8 @@
 #ifndef _USER_HH
 #define _USER_HH
 
+#include "ProblemSet.hh"
+
 #ifndef NO_DIAGRAM
 #include <map>
 #include <iostream>

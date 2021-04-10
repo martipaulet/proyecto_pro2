@@ -18,7 +18,7 @@ using namespace std;
 /** @class UserSet
     @brief Representa un conjunto de usuario ordenados por id.
 */
-class SesionSet
+class UserSet
 {
 public:
     
@@ -134,7 +134,7 @@ public:
         \post Si el usuario con id = id_usuario del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios_totales, num_problemas_resueltos, num_problemas_intentados y curso_inscrito) de       
                 este. Retornará -1 en caso contrario.
     */
-    void ListUser(string id_usuario);
+    int ListUser(string id_usuario);
     
     
     
