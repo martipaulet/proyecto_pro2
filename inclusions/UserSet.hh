@@ -25,7 +25,7 @@ public:
     //Constructoras
     
     /** @brief  Creadora por defecto
-        \pre <em>Cierto.</em>.
+        \pre <em>Cierto.</em>
         \post El resultado es un conjunto de usuarios vacío.
     */
     UserSet();
@@ -48,7 +48,7 @@ public:
         
     /** @brief Consultora del curso del usuario.
         \pre El string id_usuario no es vacío y el usuario con id = id_usuario existe en el parámetro implícito.
-        \post Busca en el parámetro implícito el usuario con id_usuario y retornará su el atributo curso_inscrito.
+        \post Busca en el parámetro implícito el usuario con id_usuario y retornará el atributo curso_inscrito.
     */
     int GetCurso(string id_usuario) const;
     
@@ -91,7 +91,7 @@ public:
         \pre El string id_usuario no es vacía y el usuario con id = id_usuario existe en el parámetro implícito.
         \post Se incrementarán los envios_totales del usuario con id = id_usuario del parámetro implícito.
     */
-    void IncreasetotalSends(string id_usuario);
+    void IncreaseTotalSends(string id_usuario);
     
      /** @brief Modificadora de número_problemas_resueltos.
         \pre El string id_usuario no es vacía y el usuario con id = id_usuario existe en el parámetro implícito.

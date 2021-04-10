@@ -22,7 +22,7 @@ void \mbox{\hyperlink{class_user_set_a9a548c48abafd33e8460d9e8a9e40170}{Delete}}
 \begin{DoxyCompactList}\small\item\em Elimina un usuario del conjunto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_set_aff81874263edfa786d5bf6f4f17c0425}{Update}} (string id\+\_\+usuario, string id\+\_\+problema, int r)
 \begin{DoxyCompactList}\small\item\em Actualiza un usuario del conjunto. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_user_set_a9900fead5f07b95a78418787914de06f}{Increasetotal\+Sends}} (string id\+\_\+usuario)
+void \mbox{\hyperlink{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}{Increase\+Total\+Sends}} (string id\+\_\+usuario)
 \begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+totales. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_set_a7462310142b0f573b51708d9eb7ead56}{Increase\+Solved\+Problems}} (string id\+\_\+usuario)
 \begin{DoxyCompactList}\small\item\em Modificadora de número\+\_\+problemas\+\_\+resueltos. \end{DoxyCompactList}\item 
@@ -61,7 +61,7 @@ Definición en la línea 21 del archivo User\+Set.\+hh.
 Creadora por defecto. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.}. 
+{\itshape Cierto.} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultado es un conjunto de usuarios vacío. 
@@ -115,7 +115,7 @@ Consultora del curso del usuario.
 El string id\+\_\+usuario no es vacío y el usuario con id = id\+\_\+usuario existe en el parámetro implícito. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Busca en el parámetro implícito el usuario con id\+\_\+usuario y retornará su el atributo curso\+\_\+inscrito. 
+Busca en el parámetro implícito el usuario con id\+\_\+usuario y retornará el atributo curso\+\_\+inscrito. 
 \end{DoxyPostcond}
 \mbox{\Hypertarget{class_user_set_af0b143d52582d95f08ad92c9eee64394}\label{class_user_set_af0b143d52582d95f08ad92c9eee64394}} 
 \index{User\+Set@{User\+Set}!Add@{Add}}
@@ -175,11 +175,11 @@ Si r vale 0\+:
 \begin{DoxyItemize}
 \item Dentro del problema con id\+\_\+problema, se ha de incrementar envios\+\_\+totales (si envios\+\_\+totales pasa a valer 1, se incrementara el num\+\_\+problemas\+\_\+intentados del usuario id\+\_\+usuario), actualizando el ratio.
 \item Se incrementará la variable enviostotales dentro del usuario 
-\end{DoxyItemize}\mbox{\Hypertarget{class_user_set_a9900fead5f07b95a78418787914de06f}\label{class_user_set_a9900fead5f07b95a78418787914de06f}} 
-\index{User\+Set@{User\+Set}!Increasetotal\+Sends@{Increasetotal\+Sends}}
-\index{Increasetotal\+Sends@{Increasetotal\+Sends}!User\+Set@{User\+Set}}
-\subsubsection{\texorpdfstring{Increasetotal\+Sends()}{IncreasetotalSends()}}
-{\footnotesize\ttfamily void User\+Set\+::\+Increasetotal\+Sends (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+\end{DoxyItemize}\mbox{\Hypertarget{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}\label{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}} 
+\index{User\+Set@{User\+Set}!Increase\+Total\+Sends@{Increase\+Total\+Sends}}
+\index{Increase\+Total\+Sends@{Increase\+Total\+Sends}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Increase\+Total\+Sends()}{IncreaseTotalSends()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Increase\+Total\+Sends (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
 
 
 

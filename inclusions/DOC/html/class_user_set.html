@@ -96,9 +96,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:aff81874263edfa786d5bf6f4f17c0425"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_set.html#aff81874263edfa786d5bf6f4f17c0425">Update</a> (string id_usuario, string id_problema, int r)</td></tr>
 <tr class="memdesc:aff81874263edfa786d5bf6f4f17c0425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza un usuario del conjunto.  <a href="#aff81874263edfa786d5bf6f4f17c0425">Más...</a><br /></td></tr>
 <tr class="separator:aff81874263edfa786d5bf6f4f17c0425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9900fead5f07b95a78418787914de06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_set.html#a9900fead5f07b95a78418787914de06f">IncreasetotalSends</a> (string id_usuario)</td></tr>
-<tr class="memdesc:a9900fead5f07b95a78418787914de06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora de envios_totales.  <a href="#a9900fead5f07b95a78418787914de06f">Más...</a><br /></td></tr>
-<tr class="separator:a9900fead5f07b95a78418787914de06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967c4fc4280fecb741abe4c9dc08cb59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_set.html#a967c4fc4280fecb741abe4c9dc08cb59">IncreaseTotalSends</a> (string id_usuario)</td></tr>
+<tr class="memdesc:a967c4fc4280fecb741abe4c9dc08cb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora de envios_totales.  <a href="#a967c4fc4280fecb741abe4c9dc08cb59">Más...</a><br /></td></tr>
+<tr class="separator:a967c4fc4280fecb741abe4c9dc08cb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7462310142b0f573b51708d9eb7ead56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_set.html#a7462310142b0f573b51708d9eb7ead56">IncreaseSolvedProblems</a> (string id_usuario)</td></tr>
 <tr class="memdesc:a7462310142b0f573b51708d9eb7ead56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora de número_problemas_resueltos.  <a href="#a7462310142b0f573b51708d9eb7ead56">Más...</a><br /></td></tr>
 <tr class="separator:a7462310142b0f573b51708d9eb7ead56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +145,7 @@ Métodos públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creadora por defecto. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto.</em>. </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto.</em> </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>El resultado es un conjunto de usuarios vacío. </dd></dl>
 
 </div>
@@ -212,7 +212,7 @@ Métodos públicos</h2></td></tr>
 
 <p>Consultora del curso del usuario. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>El string id_usuario no es vacío y el usuario con id = id_usuario existe en el parámetro implícito. </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Busca en el parámetro implícito el usuario con id_usuario y retornará su el atributo curso_inscrito. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Busca en el parámetro implícito el usuario con id_usuario y retornará el atributo curso_inscrito. </dd></dl>
 
 </div>
 </div>
@@ -308,14 +308,14 @@ Métodos públicos</h2></td></tr>
 
 </div>
 </div>
-<a id="a9900fead5f07b95a78418787914de06f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9900fead5f07b95a78418787914de06f">&#9670;&nbsp;</a></span>IncreasetotalSends()</h2>
+<a id="a967c4fc4280fecb741abe4c9dc08cb59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967c4fc4280fecb741abe4c9dc08cb59">&#9670;&nbsp;</a></span>IncreaseTotalSends()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void UserSet::IncreasetotalSends </td>
+          <td class="memname">void UserSet::IncreaseTotalSends </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>id_usuario</em></td><td>)</td>
