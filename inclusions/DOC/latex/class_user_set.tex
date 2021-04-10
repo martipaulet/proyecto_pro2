@@ -2,7 +2,7 @@
 \label{class_user_set}\index{User\+Set@{User\+Set}}
 
 
-Representa un conjunto de usuario ordenados por id.  
+Representa un conjunto de usuario ordenados crecientemente por id.  
 
 
 \subsection*{Métodos públicos}
@@ -43,7 +43,7 @@ void \mbox{\hyperlink{class_user_set_a52e8ebe8033813cf5ad7d8b23d7eea4c}{List\+Re
 
 
 \subsection{Descripción detallada}
-Representa un conjunto de usuario ordenados por id. 
+Representa un conjunto de usuario ordenados crecientemente por id. 
 
 Definición en la línea 21 del archivo User\+Set.\+hh.
 
@@ -170,12 +170,14 @@ Si r vale 1\+:
 \item Se comprobará si todos los problemas de curso\+\_\+incrito constan como Solved, y en ese caso curso\+\_\+inscrito se escribirá a 0. (usuarios.\+Update llamará a cursos.\+Update con el curso del usuario u antes de poner curso\+\_\+inscrito a 0). Se decrementará la variable num\+\_\+usuarios\+\_\+inscritos y se incrementará la variable num\+\_\+usuarios\+\_\+completados si curso\+\_\+inscrito=0.
 \item Se incrementará la variable enviostotales dentro del usuario id\+\_\+usuario.
 \end{DoxyItemize}
-\end{DoxyPostcond}
+
 Si r vale 0\+:
 \begin{DoxyItemize}
 \item Dentro del problema con id\+\_\+problema, se ha de incrementar envios\+\_\+totales (si envios\+\_\+totales pasa a valer 1, se incrementara el num\+\_\+problemas\+\_\+intentados del usuario id\+\_\+usuario), actualizando el ratio.
 \item Se incrementará la variable enviostotales dentro del usuario 
-\end{DoxyItemize}\mbox{\Hypertarget{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}\label{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}} 
+\end{DoxyItemize}
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}\label{class_user_set_a967c4fc4280fecb741abe4c9dc08cb59}} 
 \index{User\+Set@{User\+Set}!Increase\+Total\+Sends@{Increase\+Total\+Sends}}
 \index{Increase\+Total\+Sends@{Increase\+Total\+Sends}!User\+Set@{User\+Set}}
 \subsubsection{\texorpdfstring{Increase\+Total\+Sends()}{IncreaseTotalSends()}}

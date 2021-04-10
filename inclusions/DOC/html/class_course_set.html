@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Representa un conjunto de cursos.  
+<p>Representa un conjunto de cursos ordenados crecientemente por id.  
  <a href="class_course_set.html#details">Más...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -82,7 +82,7 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:ac255028f38ba0b5b3ef1994e2a9a6c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora del tamaño del conjunto.  <a href="#ac255028f38ba0b5b3ef1994e2a9a6c6f">Más...</a><br /></td></tr>
 <tr class="separator:ac255028f38ba0b5b3ef1994e2a9a6c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ced9926115a2fbc8058982d148040f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_course_set.html#a1ced9926115a2fbc8058982d148040f1">Exist</a> (int id_curso) const</td></tr>
-<tr class="memdesc:a1ced9926115a2fbc8058982d148040f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora de curso en <a class="el" href="class_course_set.html" title="Representa un conjunto de cursos. ">CourseSet</a>.  <a href="#a1ced9926115a2fbc8058982d148040f1">Más...</a><br /></td></tr>
+<tr class="memdesc:a1ced9926115a2fbc8058982d148040f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora de curso en <a class="el" href="class_course_set.html" title="Representa un conjunto de cursos ordenados crecientemente por id. ">CourseSet</a>.  <a href="#a1ced9926115a2fbc8058982d148040f1">Más...</a><br /></td></tr>
 <tr class="separator:a1ced9926115a2fbc8058982d148040f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad118865a697fbb3e5765fc6583346e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_course_set.html#a3ad118865a697fbb3e5765fc6583346e">ExistProblem</a> (int id_curso, string id_problema) const</td></tr>
 <tr class="memdesc:a3ad118865a697fbb3e5765fc6583346e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora de problema en curso.  <a href="#a3ad118865a697fbb3e5765fc6583346e">Más...</a><br /></td></tr>
@@ -122,7 +122,7 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:aee3609cbaa62ae2be155754613d484e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Representa un conjunto de cursos. </p>
+<div class="textblock"><p>Representa un conjunto de cursos ordenados crecientemente por id. </p>
 
 <p class="definition">Definición en la línea <a class="el" href="_course_set_8hh_source.html#l00021">21</a> del archivo <a class="el" href="_course_set_8hh_source.html">CourseSet.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
@@ -185,7 +185,7 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Consultora de curso en <a class="el" href="class_course_set.html" title="Representa un conjunto de cursos. ">CourseSet</a>. </p>
+<p>Consultora de curso en <a class="el" href="class_course_set.html" title="Representa un conjunto de cursos ordenados crecientemente por id. ">CourseSet</a>. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>El int id_curso no es vacío. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Devuelve un booleano conforme si existe el curso con id = id_curso en el parámetro implícito. True si existe y false en caso contrario. </dd></dl>
 
@@ -338,7 +338,7 @@ Métodos públicos</h2></td></tr>
 
 <p>Añade un curso en el conjunto. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>Hay preparados en el canal estandar de entrada el número de sesiones del curso + los strings de todas las sesiones respectivas al curso. </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Si en el nuevo curso hay intersección de problemas entre sesiones, no se creará el curso. Retornará -1 Si no hay intersección de problemas entre sesiones, se creará el curso. Dentro del curso rellenaremos el curso_sesion_map, con key id_problema(string), y value id_sesion(string). Después de añadirlo, el identificador del curso será el tamaño del <a class="el" href="class_course_set.html" title="Representa un conjunto de cursos. ">CourseSet</a>. Retornará 0 (Ok) </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si en el nuevo curso hay intersección de problemas entre sesiones, no se creará el curso. Retornará -1 Si no hay intersección de problemas entre sesiones, se creará el curso. Dentro del curso rellenaremos el curso_sesion_map, con key id_problema(string), y value id_sesion(string). Después de añadirlo, el identificador del curso será el tamaño del <a class="el" href="class_course_set.html" title="Representa un conjunto de cursos ordenados crecientemente por id. ">CourseSet</a>. Retornará 0 (Ok) </dd></dl>
 
 </div>
 </div>

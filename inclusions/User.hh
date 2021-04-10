@@ -1,5 +1,5 @@
 /** @file User.hh
-    @brief Especificación de la clase Usuario
+    @brief Especificación de la clase User
 */
 
 #ifndef _USER_HH

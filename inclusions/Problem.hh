@@ -23,9 +23,9 @@ public:
     
     /** @brief  Creadora por defecto.
         \pre El string id_problema no es vacío.
-        \post El resultado es un problema con id = id_problem, envios totales = 0 , envios exito = 0 y ratio = 1.
+        \post El resultado es un problema con id = id_problema, envios totales = 0 , envios exito = 0 y ratio = 1.
     */
-    Problem(string id_problem);
+    Problem(string id_problema);
     
     
     
@@ -39,13 +39,13 @@ public:
     
     /** @brief Consultora de los envios totales.
         \pre <em>Cierto.</em>
-        \post El resultado son los envios totales del parámetro implícito.
+        \post El resultado son los envios_totales del parámetro implícito.
     */
     int GetEnviosTotales() const;
     
     /** @brief Consultora de los envios exito.
         \pre <em>Cierto.</em>
-        \post El resultado son los envios exito del parámetro implícito.
+        \post El resultado son los envios_exito del parámetro implícito.
     */
     int GetEnviosExito() const;
     

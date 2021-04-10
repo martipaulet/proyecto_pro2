@@ -16,7 +16,7 @@
 using namespace std;
 
 /** @class UserSet
-    @brief Representa un conjunto de usuario ordenados por id.
+    @brief Representa un conjunto de usuario ordenados crecientemente por id.
 */
 class UserSet
 {
@@ -74,16 +74,18 @@ public:
         \pre El string id_usuario no es vacío y el usuario con id_usuario existe. 
                 El string id_problema no es vacío y el problema con id = id_problema existe para el usuario id = id_usuario y además consta como enviable.
                 r ha de valer 1 (catalogar como éxito) o 0 (catalogar como fallo).
-        \post Si r vale 1:
-                - Se traspasa el problema con id = id_problema de ReadyToSendProblems a SolvedProblems (conservando los datos de id_problema), teniendo en cuenta que en id_problema se ha de incrementar enviostotales (si envios_totales pasa a       
+        \post   Si r vale 1:
+                - Se traspasa el problema con id = id_problema de ReadyToSendProblems a SolvedProblems (conservando los datos de id_problema), teniendo en cuenta que en id_problema se ha de incrementar enviostotales (si 
+                envios_totales pasa a       
                     valer 1, se incrementara el num_problemas_intentados) y envios_exito, actualizando el ratio.
-                - Se comprobará si todos los problemas de curso_incrito constan como Solved, y en ese caso curso_inscrito se escribirá a 0. (usuarios.Update llamará a cursos.Update con el curso del usuario u antes de poner curso_inscrito a 0).
+                - Se comprobará si todos los problemas de curso_incrito constan como Solved, y en ese caso curso_inscrito se escribirá a 0. (usuarios.Update llamará a cursos.Update con el curso del usuario u antes de poner 
+                    curso_inscrito a 0).
                     Se decrementará la variable num_usuarios_inscritos y se incrementará la variable num_usuarios_completados si curso_inscrito=0.
                 - Se incrementará la variable enviostotales dentro del usuario id_usuario.
-            
-            Si r vale 0: 
-              - Dentro del problema con id_problema, se ha de incrementar envios_totales (si envios_totales pasa a valer 1, se incrementara el num_problemas_intentados del usuario id_usuario), actualizando el ratio.
-              - Se incrementará la variable enviostotales dentro del usuario      
+                
+        \post   Si r vale 0: 
+                - Dentro del problema con id_problema, se ha de incrementar envios_totales (si envios_totales pasa a valer 1, se incrementara el num_problemas_intentados del usuario id_usuario), actualizando el ratio.
+                - Se incrementará la variable enviostotales dentro del usuario      
     */
     void Update(string id_usuario, string id_problema, int r);
     

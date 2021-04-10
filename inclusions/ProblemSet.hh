@@ -15,7 +15,7 @@
 using namespace std;
 
 /** @class ProblemSet
-    @brief Representa un conjunto de problemas ordenados por id.
+    @brief Representa un conjunto de problemas ordenados crecientemente por id.
 */
 
 class ProblemSet

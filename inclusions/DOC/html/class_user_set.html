@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Representa un conjunto de usuario ordenados por id.  
+<p>Representa un conjunto de usuario ordenados crecientemente por id.  
  <a href="class_user_set.html#details">Más...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -82,7 +82,7 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:a2474615357041661d6c00ce66209e747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora del tamaño del conjunto.  <a href="#a2474615357041661d6c00ce66209e747">Más...</a><br /></td></tr>
 <tr class="separator:a2474615357041661d6c00ce66209e747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71ead20f591befdba9f6a1e524fa3271"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_set.html#a71ead20f591befdba9f6a1e524fa3271">Exist</a> (string id_usuario) const</td></tr>
-<tr class="memdesc:a71ead20f591befdba9f6a1e524fa3271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora de usuario en <a class="el" href="class_user_set.html" title="Representa un conjunto de usuario ordenados por id. ">UserSet</a>.  <a href="#a71ead20f591befdba9f6a1e524fa3271">Más...</a><br /></td></tr>
+<tr class="memdesc:a71ead20f591befdba9f6a1e524fa3271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora de usuario en <a class="el" href="class_user_set.html" title="Representa un conjunto de usuario ordenados crecientemente por id. ">UserSet</a>.  <a href="#a71ead20f591befdba9f6a1e524fa3271">Más...</a><br /></td></tr>
 <tr class="separator:a71ead20f591befdba9f6a1e524fa3271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20c73031d173fac4db788598ea20ce79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_set.html#a20c73031d173fac4db788598ea20ce79">GetCurso</a> (string id_usuario) const</td></tr>
 <tr class="memdesc:a20c73031d173fac4db788598ea20ce79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora del curso del usuario.  <a href="#a20c73031d173fac4db788598ea20ce79">Más...</a><br /></td></tr>
@@ -125,7 +125,7 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:a52e8ebe8033813cf5ad7d8b23d7eea4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Representa un conjunto de usuario ordenados por id. </p>
+<div class="textblock"><p>Representa un conjunto de usuario ordenados crecientemente por id. </p>
 
 <p class="definition">Definición en la línea <a class="el" href="_user_set_8hh_source.html#l00021">21</a> del archivo <a class="el" href="_user_set_8hh_source.html">UserSet.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
@@ -188,7 +188,7 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Consultora de usuario en <a class="el" href="class_user_set.html" title="Representa un conjunto de usuario ordenados por id. ">UserSet</a>. </p>
+<p>Consultora de usuario en <a class="el" href="class_user_set.html" title="Representa un conjunto de usuario ordenados crecientemente por id. ">UserSet</a>. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>El string id_usuario no es vacío. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Devuelve un booleano conforme si existe el usuario con id = id_usuario en el parámetro implícito. True si existe y false en caso contrario. </dd></dl>
 
@@ -300,11 +300,13 @@ Métodos públicos</h2></td></tr>
 <li>Se comprobará si todos los problemas de curso_incrito constan como Solved, y en ese caso curso_inscrito se escribirá a 0. (usuarios.Update llamará a cursos.Update con el curso del usuario u antes de poner curso_inscrito a 0). Se decrementará la variable num_usuarios_inscritos y se incrementará la variable num_usuarios_completados si curso_inscrito=0.</li>
 <li>Se incrementará la variable enviostotales dentro del usuario id_usuario.</li>
 </ul>
-</dd></dl>
-<p>Si r vale 0:</p><ul>
+</dd>
+<dd>
+Si r vale 0:<ul>
 <li>Dentro del problema con id_problema, se ha de incrementar envios_totales (si envios_totales pasa a valer 1, se incrementara el num_problemas_intentados del usuario id_usuario), actualizando el ratio.</li>
 <li>Se incrementará la variable enviostotales dentro del usuario </li>
 </ul>
+</dd></dl>
 
 </div>
 </div>

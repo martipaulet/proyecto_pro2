@@ -6,7 +6,7 @@ var searchData=
   ['printproblem',['PrintProblem',['../class_problem.html#a17e3ab7cc42f4f8c814fe5e8e08e3e9d',1,'Problem']]],
   ['printsesion',['PrintSesion',['../class_sesion.html#abd39f61f782fffbaa2e151e0e51b9636',1,'Sesion']]],
   ['printuser',['PrintUser',['../class_user.html#a690c6b93c7a3208ec8fe27df90b7a4f0',1,'User']]],
-  ['problem',['Problem',['../class_problem.html',1,'Problem'],['../class_problem.html#a5f33ca7fa33e9056b5d392daa276809c',1,'Problem::Problem()']]],
+  ['problem',['Problem',['../class_problem.html',1,'Problem'],['../class_problem.html#ad6ccd2727ef6fed802387a29c3a085c0',1,'Problem::Problem()']]],
   ['problem_2ehh',['Problem.hh',['../_problem_8hh.html',1,'']]],
   ['problemas_5fenviables',['PROBLEMAS_ENVIABLES',['../main_8cc.html#a55393525f368bcb01300b5a8ac6fc26d',1,'main.cc']]],
   ['problemas_5fresueltos',['PROBLEMAS_RESUELTOS',['../main_8cc.html#aa1bd243bac28c37c95e9e75af147a75b',1,'main.cc']]],

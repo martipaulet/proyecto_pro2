@@ -16,7 +16,7 @@
 using namespace std;
 
 /** @class SesionSet
-    @brief Representa un conjunto de sesiones ordenados por id.
+    @brief Representa un conjunto de sesiones ordenados crecientemente por id.
 */
 class SesionSet
 {

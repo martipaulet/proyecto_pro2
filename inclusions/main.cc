@@ -218,10 +218,6 @@ int main() {
                     }
                     break;
                     
-                    
-int CourseSet::GetSesion	(	int 	id_curso,
-string 	id_problema 
-)		const
                 case ENVIO:
                     int r;
                     cin >> u >> p >> r;

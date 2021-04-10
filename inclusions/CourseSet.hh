@@ -1,5 +1,5 @@
 /** @file CourseSet.hh
-    @brief Especificación de la clase Curso
+    @brief Especificación de la clase CourseSet
 */
 
 #ifndef _COURSESET_HH
@@ -16,7 +16,7 @@
 using namespace std;
 
 /** @class CourseSet
-    @brief Representa un conjunto de cursos
+    @brief Representa un conjunto de cursos ordenados crecientemente por id.
 */
 class CourseSet
 {

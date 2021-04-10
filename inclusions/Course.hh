@@ -1,5 +1,5 @@
 /** @file Course.hh
-    @brief Especificación de la clase Curso
+    @brief Especificación de la clase Course
 */
 
 #ifndef _COURSE_HH
