@@ -1,0 +1,172 @@
+\hypertarget{class_problem}{}\section{Referencia de la Clase Problem}
+\label{class_problem}\index{Problem@{Problem}}
+
+
+Representa un problema con atributos identificador = id, envios totales = t , envios exito = e y ratio = r = (t+1)/(e+1).  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_problem_a5f33ca7fa33e9056b5d392daa276809c}{Problem}} (string id\+\_\+problem)
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_problem_a953ef8047cd489d36f4a96d10baed4af}{Get\+Problem\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del identificador del problema. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_af97fede267d1b9881854f7d8da7be49a}{Get\+Envios\+Totales}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de los envios totales. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_aff1a49d7c06873886905fc01b5ca024c}{Get\+Envios\+Exito}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de los envios exito. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_problem_a6aceef9e936ee16ef8368803f22a0268}{Get\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del ratio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_a8afb8fba991ac36958733992a67c8ed6}{Increase\+Total\+Sends}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+totales (y ratio). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_ada706600dfd8d1f49096a23f8d22db33}{Increase\+Solved\+Sends}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+exito (y ratio). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_a17e3ab7cc42f4f8c814fe5e8e08e3e9d}{Print\+Problem}} () const
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un problema con atributos identificador = id, envios totales = t , envios exito = e y ratio = r = (t+1)/(e+1). 
+
+Definición en la línea 18 del archivo Problem.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_problem_a5f33ca7fa33e9056b5d392daa276809c}\label{class_problem_a5f33ca7fa33e9056b5d392daa276809c}} 
+\index{Problem@{Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Problem()}{Problem()}}
+{\footnotesize\ttfamily Problem\+::\+Problem (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problem }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un problema con id = id\+\_\+problem, envios totales = 0 , envios exito = 0 y ratio = 1. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_problem_a953ef8047cd489d36f4a96d10baed4af}\label{class_problem_a953ef8047cd489d36f4a96d10baed4af}} 
+\index{Problem@{Problem}!Get\+Problem\+Id@{Get\+Problem\+Id}}
+\index{Get\+Problem\+Id@{Get\+Problem\+Id}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Get\+Problem\+Id()}{GetProblemId()}}
+{\footnotesize\ttfamily string Problem\+::\+Get\+Problem\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del identificador del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el identificador del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_af97fede267d1b9881854f7d8da7be49a}\label{class_problem_af97fede267d1b9881854f7d8da7be49a}} 
+\index{Problem@{Problem}!Get\+Envios\+Totales@{Get\+Envios\+Totales}}
+\index{Get\+Envios\+Totales@{Get\+Envios\+Totales}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Get\+Envios\+Totales()}{GetEnviosTotales()}}
+{\footnotesize\ttfamily int Problem\+::\+Get\+Envios\+Totales (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de los envios totales. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado son los envios totales del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_aff1a49d7c06873886905fc01b5ca024c}\label{class_problem_aff1a49d7c06873886905fc01b5ca024c}} 
+\index{Problem@{Problem}!Get\+Envios\+Exito@{Get\+Envios\+Exito}}
+\index{Get\+Envios\+Exito@{Get\+Envios\+Exito}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Get\+Envios\+Exito()}{GetEnviosExito()}}
+{\footnotesize\ttfamily int Problem\+::\+Get\+Envios\+Exito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de los envios exito. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado son los envios exito del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_a6aceef9e936ee16ef8368803f22a0268}\label{class_problem_a6aceef9e936ee16ef8368803f22a0268}} 
+\index{Problem@{Problem}!Get\+Ratio@{Get\+Ratio}}
+\index{Get\+Ratio@{Get\+Ratio}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Get\+Ratio()}{GetRatio()}}
+{\footnotesize\ttfamily double Problem\+::\+Get\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del ratio. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el ratio del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_a8afb8fba991ac36958733992a67c8ed6}\label{class_problem_a8afb8fba991ac36958733992a67c8ed6}} 
+\index{Problem@{Problem}!Increase\+Total\+Sends@{Increase\+Total\+Sends}}
+\index{Increase\+Total\+Sends@{Increase\+Total\+Sends}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Increase\+Total\+Sends()}{IncreaseTotalSends()}}
+{\footnotesize\ttfamily void Problem\+::\+Increase\+Total\+Sends (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora de envios\+\_\+totales (y ratio). 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementan los envios totales y el ratio del parámetro ímplicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_ada706600dfd8d1f49096a23f8d22db33}\label{class_problem_ada706600dfd8d1f49096a23f8d22db33}} 
+\index{Problem@{Problem}!Increase\+Solved\+Sends@{Increase\+Solved\+Sends}}
+\index{Increase\+Solved\+Sends@{Increase\+Solved\+Sends}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Increase\+Solved\+Sends()}{IncreaseSolvedSends()}}
+{\footnotesize\ttfamily void Problem\+::\+Increase\+Solved\+Sends (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora de envios\+\_\+exito (y ratio). 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementan los envios\+\_\+exito, los envios\+\_\+totales y el ratio del parámetro ímplicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_a17e3ab7cc42f4f8c814fe5e8e08e3e9d}\label{class_problem_a17e3ab7cc42f4f8c814fe5e8e08e3e9d}} 
+\index{Problem@{Problem}!Print\+Problem@{Print\+Problem}}
+\index{Print\+Problem@{Print\+Problem}!Problem@{Problem}}
+\subsubsection{\texorpdfstring{Print\+Problem()}{PrintProblem()}}
+{\footnotesize\ttfamily void Problem\+::\+Print\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos (envios\+\_\+totales, envios\+\_\+exito, ratio) del parametro implícito en el canal estandar de salida. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_problem_8hh}{Problem.\+hh}}\end{DoxyCompactItemize}

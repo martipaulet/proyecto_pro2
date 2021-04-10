@@ -1,0 +1,327 @@
+\hypertarget{class_user_set}{}\section{Referencia de la Clase User\+Set}
+\label{class_user_set}\index{User\+Set@{User\+Set}}
+
+
+Representa un conjunto de usuario ordenados por id.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_set_a1fcb7215d45571e0f9c4cf4f20b05c80}{User\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_set_a2474615357041661d6c00ce66209e747}{Size}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño del conjunto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_user_set_a71ead20f591befdba9f6a1e524fa3271}{Exist}} (string id\+\_\+usuario) const
+\begin{DoxyCompactList}\small\item\em Consultora de usuario en \mbox{\hyperlink{class_user_set}{User\+Set}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_set_a20c73031d173fac4db788598ea20ce79}{Get\+Curso}} (string id\+\_\+usuario) const
+\begin{DoxyCompactList}\small\item\em Consultora del curso del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_set_af0b143d52582d95f08ad92c9eee64394}{Add}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Añade un usuario en el conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_a9a548c48abafd33e8460d9e8a9e40170}{Delete}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Elimina un usuario del conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_aff81874263edfa786d5bf6f4f17c0425}{Update}} (string id\+\_\+usuario, string id\+\_\+problema, int r)
+\begin{DoxyCompactList}\small\item\em Actualiza un usuario del conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_a9900fead5f07b95a78418787914de06f}{Increasetotal\+Sends}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+totales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_a7462310142b0f573b51708d9eb7ead56}{Increase\+Solved\+Problems}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Modificadora de número\+\_\+problemas\+\_\+resueltos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_aaba14c5d99e15bc568bf6985e77c85af}{Increase\+Tryed\+Problems}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Modificadora del número\+\_\+problemas\+\_\+intentados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_af618063be593ccc2c3605a7d75773437}{Modify\+Course\+In}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Modificadora del curso\+\_\+inscritos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_a4618efff11bc85371b754ee58e138ba4}{Add\+From\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_a0d096b2eec4c9b5feb4a1d7c8e6d3ef6}{List\+User\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_set_a2087d9597ff9ce03ff471157040fac88}{List\+User}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_afa40c2da0d1a67c7d7d6750e4e9cd78d}{List\+Solved\+Problems}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_set_a52e8ebe8033813cf5ad7d8b23d7eea4c}{List\+Ready\+To\+Send\+Problems}} (string id\+\_\+usuario)
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un conjunto de usuario ordenados por id. 
+
+Definición en la línea 21 del archivo User\+Set.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_user_set_a1fcb7215d45571e0f9c4cf4f20b05c80}\label{class_user_set_a1fcb7215d45571e0f9c4cf4f20b05c80}} 
+\index{User\+Set@{User\+Set}!User\+Set@{User\+Set}}
+\index{User\+Set@{User\+Set}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{User\+Set()}{UserSet()}}
+{\footnotesize\ttfamily User\+Set\+::\+User\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de usuarios vacío. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_user_set_a2474615357041661d6c00ce66209e747}\label{class_user_set_a2474615357041661d6c00ce66209e747}} 
+\index{User\+Set@{User\+Set}!Size@{Size}}
+\index{Size@{Size}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily int User\+Set\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño del conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por el canal estandar de salida el tamaño del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a71ead20f591befdba9f6a1e524fa3271}\label{class_user_set_a71ead20f591befdba9f6a1e524fa3271}} 
+\index{User\+Set@{User\+Set}!Exist@{Exist}}
+\index{Exist@{Exist}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Exist()}{Exist()}}
+{\footnotesize\ttfamily bool User\+Set\+::\+Exist (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de usuario en \mbox{\hyperlink{class_user_set}{User\+Set}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un booleano conforme si existe el usuario con id = id\+\_\+usuario en el parámetro implícito. True si existe y false en caso contrario. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a20c73031d173fac4db788598ea20ce79}\label{class_user_set_a20c73031d173fac4db788598ea20ce79}} 
+\index{User\+Set@{User\+Set}!Get\+Curso@{Get\+Curso}}
+\index{Get\+Curso@{Get\+Curso}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Get\+Curso()}{GetCurso()}}
+{\footnotesize\ttfamily int User\+Set\+::\+Get\+Curso (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del curso del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío y el usuario con id = id\+\_\+usuario existe en el parámetro implícito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el usuario con id\+\_\+usuario y retornará su el atributo curso\+\_\+inscrito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_af0b143d52582d95f08ad92c9eee64394}\label{class_user_set_af0b143d52582d95f08ad92c9eee64394}} 
+\index{User\+Set@{User\+Set}!Add@{Add}}
+\index{Add@{Add}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily int User\+Set\+::\+Add (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Añade un usuario en el conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si en el parámetro implícito ya existe el usuario con id = id\+\_\+usuario, no se añadirá el usuario. Retornará -\/1 En caso contrario se añadirá el usuario con id = id\+\_\+usuario al parámetro implícito. Retornará 0. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a9a548c48abafd33e8460d9e8a9e40170}\label{class_user_set_a9a548c48abafd33e8460d9e8a9e40170}} 
+\index{User\+Set@{User\+Set}!Delete@{Delete}}
+\index{Delete@{Delete}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Delete (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Elimina un usuario del conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío y el usuario con id\+\_\+usuario existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se eliminará todo lo referente al usuario con id = id\+\_\+usuario. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_aff81874263edfa786d5bf6f4f17c0425}\label{class_user_set_aff81874263edfa786d5bf6f4f17c0425}} 
+\index{User\+Set@{User\+Set}!Update@{Update}}
+\index{Update@{Update}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Update (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario,  }\item[{string}]{id\+\_\+problema,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Actualiza un usuario del conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío y el usuario con id\+\_\+usuario existe. El string id\+\_\+problema no es vacío y el problema con id = id\+\_\+problema existe para el usuario id = id\+\_\+usuario y además consta como enviable. r ha de valer 1 (catalogar como éxito) o 0 (catalogar como fallo). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si r vale 1\+:
+\begin{DoxyItemize}
+\item Se traspasa el problema con id = id\+\_\+problema de Ready\+To\+Send\+Problems a Solved\+Problems (conservando los datos de id\+\_\+problema), teniendo en cuenta que en id\+\_\+problema se ha de incrementar enviostotales (si envios\+\_\+totales pasa a ~\newline
+ valer 1, se incrementara el num\+\_\+problemas\+\_\+intentados) y envios\+\_\+exito, actualizando el ratio.
+\item Se comprobará si todos los problemas de curso\+\_\+incrito constan como Solved, y en ese caso curso\+\_\+inscrito se escribirá a 0. (usuarios.\+Update llamará a cursos.\+Update con el curso del usuario u antes de poner curso\+\_\+inscrito a 0). Se decrementará la variable num\+\_\+usuarios\+\_\+inscritos y se incrementará la variable num\+\_\+usuarios\+\_\+completados si curso\+\_\+inscrito=0.
+\item Se incrementará la variable enviostotales dentro del usuario id\+\_\+usuario.
+\end{DoxyItemize}
+\end{DoxyPostcond}
+Si r vale 0\+:
+\begin{DoxyItemize}
+\item Dentro del problema con id\+\_\+problema, se ha de incrementar envios\+\_\+totales (si envios\+\_\+totales pasa a valer 1, se incrementara el num\+\_\+problemas\+\_\+intentados del usuario id\+\_\+usuario), actualizando el ratio.
+\item Se incrementará la variable enviostotales dentro del usuario 
+\end{DoxyItemize}\mbox{\Hypertarget{class_user_set_a9900fead5f07b95a78418787914de06f}\label{class_user_set_a9900fead5f07b95a78418787914de06f}} 
+\index{User\+Set@{User\+Set}!Increasetotal\+Sends@{Increasetotal\+Sends}}
+\index{Increasetotal\+Sends@{Increasetotal\+Sends}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Increasetotal\+Sends()}{IncreasetotalSends()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Increasetotal\+Sends (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Modificadora de envios\+\_\+totales. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacía y el usuario con id = id\+\_\+usuario existe en el parámetro implícito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementarán los envios\+\_\+totales del usuario con id = id\+\_\+usuario del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a7462310142b0f573b51708d9eb7ead56}\label{class_user_set_a7462310142b0f573b51708d9eb7ead56}} 
+\index{User\+Set@{User\+Set}!Increase\+Solved\+Problems@{Increase\+Solved\+Problems}}
+\index{Increase\+Solved\+Problems@{Increase\+Solved\+Problems}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Increase\+Solved\+Problems()}{IncreaseSolvedProblems()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Increase\+Solved\+Problems (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Modificadora de número\+\_\+problemas\+\_\+resueltos. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacía y el usuario con id = id\+\_\+usuario existe en el parámetro implícito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementará el num\+\_\+problemas\+\_\+resuletos del usuario con id = id\+\_\+usuario del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_aaba14c5d99e15bc568bf6985e77c85af}\label{class_user_set_aaba14c5d99e15bc568bf6985e77c85af}} 
+\index{User\+Set@{User\+Set}!Increase\+Tryed\+Problems@{Increase\+Tryed\+Problems}}
+\index{Increase\+Tryed\+Problems@{Increase\+Tryed\+Problems}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Increase\+Tryed\+Problems()}{IncreaseTryedProblems()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Increase\+Tryed\+Problems (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Modificadora del número\+\_\+problemas\+\_\+intentados. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacía y el usuario con id = id\+\_\+usuario existe en el parámetro implícito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementará el num\+\_\+problemas\+\_\+intentados del usuario con id = id\+\_\+usuario del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_af618063be593ccc2c3605a7d75773437}\label{class_user_set_af618063be593ccc2c3605a7d75773437}} 
+\index{User\+Set@{User\+Set}!Modify\+Course\+In@{Modify\+Course\+In}}
+\index{Modify\+Course\+In@{Modify\+Course\+In}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Modify\+Course\+In()}{ModifyCourseIn()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Modify\+Course\+In (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Modificadora del curso\+\_\+inscritos. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacía y el usuario con id = id\+\_\+usuario existe en el parámetro implícito. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se modificará el curso\+\_\+inscrito del usuario con id = id\+\_\+usuario del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a4618efff11bc85371b754ee58e138ba4}\label{class_user_set_a4618efff11bc85371b754ee58e138ba4}} 
+\index{User\+Set@{User\+Set}!Add\+From\+Console@{Add\+From\+Console}}
+\index{Add\+From\+Console@{Add\+From\+Console}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{Add\+From\+Console()}{AddFromConsole()}}
+{\footnotesize\ttfamily void User\+Set\+::\+Add\+From\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay preparado en el canal estandar de entrada un int = M que es el número de usuarios a leer + M identificadores de los usuarios correspondientes. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el conjunto de usuarios completado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a0d096b2eec4c9b5feb4a1d7c8e6d3ef6}\label{class_user_set_a0d096b2eec4c9b5feb4a1d7c8e6d3ef6}} 
+\index{User\+Set@{User\+Set}!List\+User\+Set@{List\+User\+Set}}
+\index{List\+User\+Set@{List\+User\+Set}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{List\+User\+Set()}{ListUserSet()}}
+{\footnotesize\ttfamily void User\+Set\+::\+List\+User\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por el canal estandar de salida los atributos (envios\+\_\+totales, num\+\_\+problemas\+\_\+resueltos, num\+\_\+problemas\+\_\+intentados y curso\+\_\+inscrito) de los usuarios del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a2087d9597ff9ce03ff471157040fac88}\label{class_user_set_a2087d9597ff9ce03ff471157040fac88}} 
+\index{User\+Set@{User\+Set}!List\+User@{List\+User}}
+\index{List\+User@{List\+User}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{List\+User()}{ListUser()}}
+{\footnotesize\ttfamily int User\+Set\+::\+List\+User (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si el usuario con id = id\+\_\+usuario del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios\+\_\+totales, num\+\_\+problemas\+\_\+resueltos, num\+\_\+problemas\+\_\+intentados y curso\+\_\+inscrito) de ~\newline
+ este. Retornará -\/1 en caso contrario. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_afa40c2da0d1a67c7d7d6750e4e9cd78d}\label{class_user_set_afa40c2da0d1a67c7d7d6750e4e9cd78d}} 
+\index{User\+Set@{User\+Set}!List\+Solved\+Problems@{List\+Solved\+Problems}}
+\index{List\+Solved\+Problems@{List\+Solved\+Problems}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{List\+Solved\+Problems()}{ListSolvedProblems()}}
+{\footnotesize\ttfamily void User\+Set\+::\+List\+Solved\+Problems (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío y el usuario con id = id\+\_\+usuario existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Mostrará por el canal estandar de salida la lista de problemas resueltos por el usuario con id = id\+\_\+usuario de la manera id\+\_\+problema\+: num\+\_\+envios\+\_\+totales. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_set_a52e8ebe8033813cf5ad7d8b23d7eea4c}\label{class_user_set_a52e8ebe8033813cf5ad7d8b23d7eea4c}} 
+\index{User\+Set@{User\+Set}!List\+Ready\+To\+Send\+Problems@{List\+Ready\+To\+Send\+Problems}}
+\index{List\+Ready\+To\+Send\+Problems@{List\+Ready\+To\+Send\+Problems}!User\+Set@{User\+Set}}
+\subsubsection{\texorpdfstring{List\+Ready\+To\+Send\+Problems()}{ListReadyToSendProblems()}}
+{\footnotesize\ttfamily void User\+Set\+::\+List\+Ready\+To\+Send\+Problems (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+usuario }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+usuario no es vacío y el usuario con id = id\+\_\+usuario existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Mostrará por el canal estandar de salida la lista de problemas enviables por el usuario con id = id\+\_\+usuario de la manera id\+\_\+problema\+: num\+\_\+envios\+\_\+totales. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_user_set_8hh}{User\+Set.\+hh}}\end{DoxyCompactItemize}

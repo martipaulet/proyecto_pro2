@@ -1,0 +1,172 @@
+\hypertarget{class_course}{}\section{Referencia de la Clase Course}
+\label{class_course}\index{Course@{Course}}
+
+
+Representa un curso con el numero de usuarios con el curso completado, el numero de usuarios inscritos actualmente en el curso y el número de sesiones que lo forman con su identificador (en el orden que se leyeron al introducirlas en el curso).  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_course_a6b959ccf15d9ceed9e9c14a701561982}{Course}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_course_ad17501c45b744c632235c05365f05f1d}{Get\+Num\+Users\+Done}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del número de usuarios completados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_course_a3ce2bc364698f6857385d7bb0ea82812}{Get\+Num\+Users\+In}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del número de usuarios inscritos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_a56a7f6bfd9dcd415c35246b2dc4afddb}{Get\+Sesion}} (string id\+\_\+problema) const
+\begin{DoxyCompactList}\small\item\em Consultora de la sesion que contiene el problema id\+\_\+problema en el parametro implícito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_aa44f6ece5bc630400d9e7edff41680c0}{Increase\+Num\+Users\+Done}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora del número de usuarios completados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_ab1bf31a23895b7ece77ab0c74a4de321}{Increase\+Num\+Users\+In}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora del número de usuarios inscritos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_ab23d9a5201da47a27d9b307a5889ca23}{Decrease\+Num\+Users\+In}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora del número de usuarios inscritos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_ae6becc4684a1ae379b9e26b4b50d8d23}{Print\+Course}} () const
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un curso con el numero de usuarios con el curso completado, el numero de usuarios inscritos actualmente en el curso y el número de sesiones que lo forman con su identificador (en el orden que se leyeron al introducirlas en el curso). 
+
+Definición en la línea 19 del archivo Course.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_course_a6b959ccf15d9ceed9e9c14a701561982}\label{class_course_a6b959ccf15d9ceed9e9c14a701561982}} 
+\index{Course@{Course}!Course@{Course}}
+\index{Course@{Course}!Course@{Course}}
+\subsubsection{\texorpdfstring{Course()}{Course()}}
+{\footnotesize\ttfamily Course\+::\+Course (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un curso sin id, num\+\_\+usuarios\+\_\+inscritos = 0, num\+\_\+usuarios\+\_\+completado = 0 y la lista de problemas vacia. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_course_ad17501c45b744c632235c05365f05f1d}\label{class_course_ad17501c45b744c632235c05365f05f1d}} 
+\index{Course@{Course}!Get\+Num\+Users\+Done@{Get\+Num\+Users\+Done}}
+\index{Get\+Num\+Users\+Done@{Get\+Num\+Users\+Done}!Course@{Course}}
+\subsubsection{\texorpdfstring{Get\+Num\+Users\+Done()}{GetNumUsersDone()}}
+{\footnotesize\ttfamily int Course\+::\+Get\+Num\+Users\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número de usuarios completados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el número de usuarios que han completado el parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_a3ce2bc364698f6857385d7bb0ea82812}\label{class_course_a3ce2bc364698f6857385d7bb0ea82812}} 
+\index{Course@{Course}!Get\+Num\+Users\+In@{Get\+Num\+Users\+In}}
+\index{Get\+Num\+Users\+In@{Get\+Num\+Users\+In}!Course@{Course}}
+\subsubsection{\texorpdfstring{Get\+Num\+Users\+In()}{GetNumUsersIn()}}
+{\footnotesize\ttfamily int Course\+::\+Get\+Num\+Users\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número de usuarios inscritos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el número de usuarios inscritos (actualmente) en el parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_a56a7f6bfd9dcd415c35246b2dc4afddb}\label{class_course_a56a7f6bfd9dcd415c35246b2dc4afddb}} 
+\index{Course@{Course}!Get\+Sesion@{Get\+Sesion}}
+\index{Get\+Sesion@{Get\+Sesion}!Course@{Course}}
+\subsubsection{\texorpdfstring{Get\+Sesion()}{GetSesion()}}
+{\footnotesize\ttfamily void Course\+::\+Get\+Sesion (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la sesion que contiene el problema id\+\_\+problema en el parametro implícito. 
+
+\begin{DoxyPrecond}{Precondición}
+El problema id\+\_\+problema no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve la sesión en la que se encuentra el problema con id = id\+\_\+problema en el parametro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_aa44f6ece5bc630400d9e7edff41680c0}\label{class_course_aa44f6ece5bc630400d9e7edff41680c0}} 
+\index{Course@{Course}!Increase\+Num\+Users\+Done@{Increase\+Num\+Users\+Done}}
+\index{Increase\+Num\+Users\+Done@{Increase\+Num\+Users\+Done}!Course@{Course}}
+\subsubsection{\texorpdfstring{Increase\+Num\+Users\+Done()}{IncreaseNumUsersDone()}}
+{\footnotesize\ttfamily void Course\+::\+Increase\+Num\+Users\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora del número de usuarios completados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementará el número de usuarios con el parámetro ímplicito completado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_ab1bf31a23895b7ece77ab0c74a4de321}\label{class_course_ab1bf31a23895b7ece77ab0c74a4de321}} 
+\index{Course@{Course}!Increase\+Num\+Users\+In@{Increase\+Num\+Users\+In}}
+\index{Increase\+Num\+Users\+In@{Increase\+Num\+Users\+In}!Course@{Course}}
+\subsubsection{\texorpdfstring{Increase\+Num\+Users\+In()}{IncreaseNumUsersIn()}}
+{\footnotesize\ttfamily void Course\+::\+Increase\+Num\+Users\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora del número de usuarios inscritos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementará el número de usuarios inscritos (actualmente) en el parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_ab23d9a5201da47a27d9b307a5889ca23}\label{class_course_ab23d9a5201da47a27d9b307a5889ca23}} 
+\index{Course@{Course}!Decrease\+Num\+Users\+In@{Decrease\+Num\+Users\+In}}
+\index{Decrease\+Num\+Users\+In@{Decrease\+Num\+Users\+In}!Course@{Course}}
+\subsubsection{\texorpdfstring{Decrease\+Num\+Users\+In()}{DecreaseNumUsersIn()}}
+{\footnotesize\ttfamily void Course\+::\+Decrease\+Num\+Users\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora del número de usuarios inscritos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se decrementará el número de usuarios inscritos (actualmente) en el parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_course_ae6becc4684a1ae379b9e26b4b50d8d23}\label{class_course_ae6becc4684a1ae379b9e26b4b50d8d23}} 
+\index{Course@{Course}!Print\+Course@{Print\+Course}}
+\index{Print\+Course@{Print\+Course}!Course@{Course}}
+\subsubsection{\texorpdfstring{Print\+Course()}{PrintCourse()}}
+{\footnotesize\ttfamily void Course\+::\+Print\+Course (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos (num\+\_\+usuarios\+\_\+completados, num\+\_\+usuarios\+\_\+inscritos, num\+\_\+sesiones + id\+\_\+sesiones de estas en el orden que se creó el curso) del parametro implícito en el canal estandar de salida. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_course_8hh}{Course.\+hh}}\end{DoxyCompactItemize}

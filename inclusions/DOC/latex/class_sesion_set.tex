@@ -1,0 +1,244 @@
+\hypertarget{class_sesion_set}{}\section{Referencia de la Clase Sesion\+Set}
+\label{class_sesion_set}\index{Sesion\+Set@{Sesion\+Set}}
+
+
+Representa un conjunto de sesiones ordenados por id.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sesion_set_af583057121150fb193e71ae02e036bb0}{Sesion\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sesion_set_aa4cf0fbea2b9f9b6322390fc8b4a1b4c}{Size}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño del conjunto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sesion_set_a4e9002494d6532d3cdbd31172b8a08b0}{Exist}} (string id\+\_\+sesion) const
+\begin{DoxyCompactList}\small\item\em Consultora de sesion en \mbox{\hyperlink{class_sesion_set}{Sesion\+Set}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sesion_set_a0c84ef607240e540fd1bcaec68280636}{Get\+Sesion\+Id}} (string id\+\_\+sesion) const
+\begin{DoxyCompactList}\small\item\em Consultora del identificador de la sesión. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sesion_set_afeb85dad709e3fc5717e93c05a24bf8f}{Get\+Num\+Problems}} (string id\+\_\+sesion) const
+\begin{DoxyCompactList}\small\item\em Consultora del número de problemas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_set_a40ab167ffeda96c90a899c669b7c8a7c}{Get\+Problems\+Id}} (string id\+\_\+sesion) const
+\begin{DoxyCompactList}\small\item\em Consultora del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de la sesión. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sesion_set_a74a8b110d55902c12d867e090c6092c2}{Add\+One\+From\+Console}} (string id\+\_\+sesion)
+\begin{DoxyCompactList}\small\item\em Añade una sesion en el conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_set_af1acf5c32c501d5fa3e6a282ec3c176e}{Make\+Bin\+Tree}} (string id\+\_\+sesion)
+\begin{DoxyCompactList}\small\item\em Creadora del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de problemas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_set_a683506f0dc85b15392e77ebe4e6cc266}{Add\+From\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_set_a33e38d89cd960e91aa593ca99fdbee3d}{List\+Sesion\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sesion_set_a5edd3e0c7231ffd474be2f350f116fcb}{List\+Sesion}} (string id\+\_\+sesion)
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_set_a61757f0827ae258cc37fcd3574e20b70}{Print\+Bin\+Tree}} (string id\+\_\+sesion)
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un conjunto de sesiones ordenados por id. 
+
+Definición en la línea 21 del archivo Sesion\+Set.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_sesion_set_af583057121150fb193e71ae02e036bb0}\label{class_sesion_set_af583057121150fb193e71ae02e036bb0}} 
+\index{Sesion\+Set@{Sesion\+Set}!Sesion\+Set@{Sesion\+Set}}
+\index{Sesion\+Set@{Sesion\+Set}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Sesion\+Set()}{SesionSet()}}
+{\footnotesize\ttfamily Sesion\+Set\+::\+Sesion\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de sesiones vacío. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_sesion_set_aa4cf0fbea2b9f9b6322390fc8b4a1b4c}\label{class_sesion_set_aa4cf0fbea2b9f9b6322390fc8b4a1b4c}} 
+\index{Sesion\+Set@{Sesion\+Set}!Size@{Size}}
+\index{Size@{Size}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily int Sesion\+Set\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño del conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por el canal estandar de salida el tamaño del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a4e9002494d6532d3cdbd31172b8a08b0}\label{class_sesion_set_a4e9002494d6532d3cdbd31172b8a08b0}} 
+\index{Sesion\+Set@{Sesion\+Set}!Exist@{Exist}}
+\index{Exist@{Exist}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Exist()}{Exist()}}
+{\footnotesize\ttfamily bool Sesion\+Set\+::\+Exist (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de sesion en \mbox{\hyperlink{class_sesion_set}{Sesion\+Set}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un booleano conforme si existe la sesion con id = id\+\_\+sesion en el parámetro implícito. True si existe y false en caso contrario. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a0c84ef607240e540fd1bcaec68280636}\label{class_sesion_set_a0c84ef607240e540fd1bcaec68280636}} 
+\index{Sesion\+Set@{Sesion\+Set}!Get\+Sesion\+Id@{Get\+Sesion\+Id}}
+\index{Get\+Sesion\+Id@{Get\+Sesion\+Id}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Get\+Sesion\+Id()}{GetSesionId()}}
+{\footnotesize\ttfamily string Sesion\+Set\+::\+Get\+Sesion\+Id (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del identificador de la sesión. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito la sesión con id = id\+\_\+sesion y si la encuentra retorna el id de esta. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_afeb85dad709e3fc5717e93c05a24bf8f}\label{class_sesion_set_afeb85dad709e3fc5717e93c05a24bf8f}} 
+\index{Sesion\+Set@{Sesion\+Set}!Get\+Num\+Problems@{Get\+Num\+Problems}}
+\index{Get\+Num\+Problems@{Get\+Num\+Problems}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Get\+Num\+Problems()}{GetNumProblems()}}
+{\footnotesize\ttfamily int Sesion\+Set\+::\+Get\+Num\+Problems (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número de problemas. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito la sesión con id = id\+\_\+sesion y si la encuentra retorna el número de problemas de esta. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a40ab167ffeda96c90a899c669b7c8a7c}\label{class_sesion_set_a40ab167ffeda96c90a899c669b7c8a7c}} 
+\index{Sesion\+Set@{Sesion\+Set}!Get\+Problems\+Id@{Get\+Problems\+Id}}
+\index{Get\+Problems\+Id@{Get\+Problems\+Id}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Get\+Problems\+Id()}{GetProblemsId()}}
+{\footnotesize\ttfamily void Sesion\+Set\+::\+Get\+Problems\+Id (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de la sesión. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito la sesión con id = id\+\_\+sesion y si la encuentra retorna los id de los problemas (siguiendo la estructura en postorden) de esta. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a74a8b110d55902c12d867e090c6092c2}\label{class_sesion_set_a74a8b110d55902c12d867e090c6092c2}} 
+\index{Sesion\+Set@{Sesion\+Set}!Add\+One\+From\+Console@{Add\+One\+From\+Console}}
+\index{Add\+One\+From\+Console@{Add\+One\+From\+Console}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Add\+One\+From\+Console()}{AddOneFromConsole()}}
+{\footnotesize\ttfamily int Sesion\+Set\+::\+Add\+One\+From\+Console (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption})}
+
+
+
+Añade una sesion en el conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío y hay preparados en el canal estandar de entrada un número = P de identificadores de problemas + P identificadores (id\+\_\+problems). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si el id\+\_\+sesion ya estaba en el parámetro implícito, pedirá los id\+\_\+problemas pero no creará el \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} ya que esta sesión será desechada. Retornará -\/1. si el id\+\_\+sesion no existia en el parámetro implícito, pedirá los id\+\_\+problemas para construir el \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} respectivo. Retornará 0 (OK). 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_af1acf5c32c501d5fa3e6a282ec3c176e}\label{class_sesion_set_af1acf5c32c501d5fa3e6a282ec3c176e}} 
+\index{Sesion\+Set@{Sesion\+Set}!Make\+Bin\+Tree@{Make\+Bin\+Tree}}
+\index{Make\+Bin\+Tree@{Make\+Bin\+Tree}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Make\+Bin\+Tree()}{MakeBinTree()}}
+{\footnotesize\ttfamily void Sesion\+Set\+::\+Make\+Bin\+Tree (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption})}
+
+
+
+Creadora del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de problemas. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío y la sesión con id = id\+\_\+sesion existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de strings de problemas siguiendo una estructura dada en postorden de la sesion con id = id\+\_\+sesion. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a683506f0dc85b15392e77ebe4e6cc266}\label{class_sesion_set_a683506f0dc85b15392e77ebe4e6cc266}} 
+\index{Sesion\+Set@{Sesion\+Set}!Add\+From\+Console@{Add\+From\+Console}}
+\index{Add\+From\+Console@{Add\+From\+Console}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Add\+From\+Console()}{AddFromConsole()}}
+{\footnotesize\ttfamily void Sesion\+Set\+::\+Add\+From\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay preparado en el canal estandar de entrada un int = Q que es el número de sesiones a leer + Q strings (identificadores de problemas) en una estructura para construir el \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de cada sesion. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el conjunto de problemas completado. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a33e38d89cd960e91aa593ca99fdbee3d}\label{class_sesion_set_a33e38d89cd960e91aa593ca99fdbee3d}} 
+\index{Sesion\+Set@{Sesion\+Set}!List\+Sesion\+Set@{List\+Sesion\+Set}}
+\index{List\+Sesion\+Set@{List\+Sesion\+Set}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{List\+Sesion\+Set()}{ListSesionSet()}}
+{\footnotesize\ttfamily void Sesion\+Set\+::\+List\+Sesion\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por el canal estandar de salida los atributos (num\+\_\+problemas + id de dichos problemas) de las sesiones del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a5edd3e0c7231ffd474be2f350f116fcb}\label{class_sesion_set_a5edd3e0c7231ffd474be2f350f116fcb}} 
+\index{Sesion\+Set@{Sesion\+Set}!List\+Sesion@{List\+Sesion}}
+\index{List\+Sesion@{List\+Sesion}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{List\+Sesion()}{ListSesion()}}
+{\footnotesize\ttfamily int Sesion\+Set\+::\+List\+Sesion (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+sesion no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si la sesión con id = id\+\_\+sesion del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (num\+\_\+problemas + id de dichos problemas) de esta. Retornará -\/1 en caso contrario. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_set_a61757f0827ae258cc37fcd3574e20b70}\label{class_sesion_set_a61757f0827ae258cc37fcd3574e20b70}} 
+\index{Sesion\+Set@{Sesion\+Set}!Print\+Bin\+Tree@{Print\+Bin\+Tree}}
+\index{Print\+Bin\+Tree@{Print\+Bin\+Tree}!Sesion\+Set@{Sesion\+Set}}
+\subsubsection{\texorpdfstring{Print\+Bin\+Tree()}{PrintBinTree()}}
+{\footnotesize\ttfamily void Sesion\+Set\+::\+Print\+Bin\+Tree (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+La sesion con id\+\_\+sesion tiene un \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de strings de id\+\_\+problemas. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito el identificador de los problemas del parámetro implícito siguiendo la estructura de prerequisitos en postorden. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sesion_set_8hh}{Sesion\+Set.\+hh}}\end{DoxyCompactItemize}

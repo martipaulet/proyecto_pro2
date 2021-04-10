@@ -1,0 +1,208 @@
+\hypertarget{class_user}{}\section{Referencia de la Clase User}
+\label{class_user}\index{User@{User}}
+
+
+Representa un usuario con el numero de envios\+\_\+totales que ha realizado, el número de problemas resueltos, el número de problemas intentados en total, el curso en el qual está inscrito (si lo está) y dos \mbox{\hyperlink{class_problem_set}{Problem\+Set}} con los problemas\+\_\+resueltos y los problemas\+\_\+enviables respectivamente.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_a7e91af81476c9ae37cd2bad99862fc8f}{Get\+Curso}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del curso del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_aa9e61fa20b935204897891e161a75286}{Get\+Total\+Sends}} () const
+\begin{DoxyCompactList}\small\item\em Consultora d envios\+\_\+totales del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_a8c4799a9a4bfa78fbe289f845deaccb1}{Get\+Tryed\+Problems}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de num\+\_\+problemas\+\_\+intentados del usuario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_a4dc2fc233119ddda449099634f4d2c46}{Get\+Solved\+Problems}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de num\+\_\+problemas\+\_\+resueltos del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a53b7e71fae56e308549a5773c66011f9}{Increasetotal\+Sends}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+totales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a287307b6e024775e5a570949c09d7043}{Increase\+Solved\+Problems}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora de número\+\_\+problemas\+\_\+resueltos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a45407a203e5fcb1be5e1ac9e2ff42faa}{Increase\+Tryed\+Problems}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora del número\+\_\+problemas\+\_\+intentados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a344a091da9a9fee9208ce425ca206c03}{Modify\+Course\+In}} ()
+\begin{DoxyCompactList}\small\item\em Modificadora del curso\+\_\+inscritos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a690c6b93c7a3208ec8fe27df90b7a4f0}{Print\+User}} () const
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un usuario con el numero de envios\+\_\+totales que ha realizado, el número de problemas resueltos, el número de problemas intentados en total, el curso en el qual está inscrito (si lo está) y dos \mbox{\hyperlink{class_problem_set}{Problem\+Set}} con los problemas\+\_\+resueltos y los problemas\+\_\+enviables respectivamente. 
+
+Definición en la línea 20 del archivo User.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_user_a4a0137053e591fbb79d9057dd7d2283d}\label{class_user_a4a0137053e591fbb79d9057dd7d2283d}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\subsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un usuario con envios\+\_\+totales = 0, num\+\_\+problemas\+\_\+resueltos = 0, num\+\_\+problemas\+\_\+intentados = 0 y curso\+\_\+inscrito = 0. Los \mbox{\hyperlink{class_problem_set}{Problem\+Set}} Problems\+Solved y Problems\+Ready\+To\+Send estarán vacíos. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_user_a7e91af81476c9ae37cd2bad99862fc8f}\label{class_user_a7e91af81476c9ae37cd2bad99862fc8f}} 
+\index{User@{User}!Get\+Curso@{Get\+Curso}}
+\index{Get\+Curso@{Get\+Curso}!User@{User}}
+\subsubsection{\texorpdfstring{Get\+Curso()}{GetCurso()}}
+{\footnotesize\ttfamily int User\+::\+Get\+Curso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del curso del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retornará el atributo curso\+\_\+inscrito del parametro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_aa9e61fa20b935204897891e161a75286}\label{class_user_aa9e61fa20b935204897891e161a75286}} 
+\index{User@{User}!Get\+Total\+Sends@{Get\+Total\+Sends}}
+\index{Get\+Total\+Sends@{Get\+Total\+Sends}!User@{User}}
+\subsubsection{\texorpdfstring{Get\+Total\+Sends()}{GetTotalSends()}}
+{\footnotesize\ttfamily int User\+::\+Get\+Total\+Sends (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora d envios\+\_\+totales del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retornará el atributo envios\+\_\+totales del parametro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a8c4799a9a4bfa78fbe289f845deaccb1}\label{class_user_a8c4799a9a4bfa78fbe289f845deaccb1}} 
+\index{User@{User}!Get\+Tryed\+Problems@{Get\+Tryed\+Problems}}
+\index{Get\+Tryed\+Problems@{Get\+Tryed\+Problems}!User@{User}}
+\subsubsection{\texorpdfstring{Get\+Tryed\+Problems()}{GetTryedProblems()}}
+{\footnotesize\ttfamily int User\+::\+Get\+Tryed\+Problems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de num\+\_\+problemas\+\_\+intentados del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retornará el atributo num\+\_\+problemas\+\_\+intentados del parametro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a4dc2fc233119ddda449099634f4d2c46}\label{class_user_a4dc2fc233119ddda449099634f4d2c46}} 
+\index{User@{User}!Get\+Solved\+Problems@{Get\+Solved\+Problems}}
+\index{Get\+Solved\+Problems@{Get\+Solved\+Problems}!User@{User}}
+\subsubsection{\texorpdfstring{Get\+Solved\+Problems()}{GetSolvedProblems()}}
+{\footnotesize\ttfamily int User\+::\+Get\+Solved\+Problems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de num\+\_\+problemas\+\_\+resueltos del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retornará el atributo num\+\_\+problemas\+\_\+resueltos del parametro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a53b7e71fae56e308549a5773c66011f9}\label{class_user_a53b7e71fae56e308549a5773c66011f9}} 
+\index{User@{User}!Increasetotal\+Sends@{Increasetotal\+Sends}}
+\index{Increasetotal\+Sends@{Increasetotal\+Sends}!User@{User}}
+\subsubsection{\texorpdfstring{Increasetotal\+Sends()}{IncreasetotalSends()}}
+{\footnotesize\ttfamily void User\+::\+Increasetotal\+Sends (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora de envios\+\_\+totales. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementarán los envios\+\_\+totales del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a287307b6e024775e5a570949c09d7043}\label{class_user_a287307b6e024775e5a570949c09d7043}} 
+\index{User@{User}!Increase\+Solved\+Problems@{Increase\+Solved\+Problems}}
+\index{Increase\+Solved\+Problems@{Increase\+Solved\+Problems}!User@{User}}
+\subsubsection{\texorpdfstring{Increase\+Solved\+Problems()}{IncreaseSolvedProblems()}}
+{\footnotesize\ttfamily void User\+::\+Increase\+Solved\+Problems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora de número\+\_\+problemas\+\_\+resueltos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementará el número\+\_\+problemas\+\_\+resueltos del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a45407a203e5fcb1be5e1ac9e2ff42faa}\label{class_user_a45407a203e5fcb1be5e1ac9e2ff42faa}} 
+\index{User@{User}!Increase\+Tryed\+Problems@{Increase\+Tryed\+Problems}}
+\index{Increase\+Tryed\+Problems@{Increase\+Tryed\+Problems}!User@{User}}
+\subsubsection{\texorpdfstring{Increase\+Tryed\+Problems()}{IncreaseTryedProblems()}}
+{\footnotesize\ttfamily void User\+::\+Increase\+Tryed\+Problems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora del número\+\_\+problemas\+\_\+intentados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se incrementará el número\+\_\+problemas\+\_\+intentados del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a344a091da9a9fee9208ce425ca206c03}\label{class_user_a344a091da9a9fee9208ce425ca206c03}} 
+\index{User@{User}!Modify\+Course\+In@{Modify\+Course\+In}}
+\index{Modify\+Course\+In@{Modify\+Course\+In}!User@{User}}
+\subsubsection{\texorpdfstring{Modify\+Course\+In()}{ModifyCourseIn()}}
+{\footnotesize\ttfamily void User\+::\+Modify\+Course\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora del curso\+\_\+inscritos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se modificará el curso\+\_\+inscrito del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_user_a690c6b93c7a3208ec8fe27df90b7a4f0}\label{class_user_a690c6b93c7a3208ec8fe27df90b7a4f0}} 
+\index{User@{User}!Print\+User@{Print\+User}}
+\index{Print\+User@{Print\+User}!User@{User}}
+\subsubsection{\texorpdfstring{Print\+User()}{PrintUser()}}
+{\footnotesize\ttfamily void User\+::\+Print\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos (envios\+\_\+totales, num\+\_\+problemas\+\_\+resueltos, num\+\_\+problemas\+\_\+intentados y curso\+\_\+inscrito) del parametro implícito en el canal estandar de salida. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_user_8hh}{User.\+hh}}\end{DoxyCompactItemize}

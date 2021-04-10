@@ -1,0 +1,284 @@
+\hypertarget{class_problem_set}{}\section{Referencia de la Clase Problem\+Set}
+\label{class_problem_set}\index{Problem\+Set@{Problem\+Set}}
+
+
+Representa un conjunto de problemas ordenados por id.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_problem_set_a3eadb6c62386acf9948b95bb6d05b5ae}{Problem\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_problem_set_a51774196cd2b29bfc0e0adcca8dd325d}{Exist}} (string id\+\_\+problema) const
+\begin{DoxyCompactList}\small\item\em Consultora de problema en \mbox{\hyperlink{class_problem_set}{Problem\+Set}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_set_ac173526274dc6d5f88623c3dd2630cd6}{Size}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño del conjunto. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_problem_set_a8fd763c7dbee07a8f0101119f23e694a}{Get\+Problem\+Id}} (string id\+\_\+problema) const
+\begin{DoxyCompactList}\small\item\em Consultora del identificador del problema. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_set_a33746a7a5aefdce5a4e8a5bf597c84f1}{Get\+Envios\+Totales}} (string id\+\_\+problema) const
+\begin{DoxyCompactList}\small\item\em Consultora de los envios totales. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_set_aaf4917f4ebb7dc317ca91f1ecdbc2fe9}{Get\+Envios\+Exito}} (string id\+\_\+problema) const
+\begin{DoxyCompactList}\small\item\em Consultora de los envios exito. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_problem_set_aae2358d2149c1f703d97f2882ae2bec6}{Get\+Ratio}} (string id\+\_\+problema) const
+\begin{DoxyCompactList}\small\item\em Consultora del ratio. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_set_ae41f8319bc9355824cf982879c7d0453}{Add}} (string id\+\_\+problema)
+\begin{DoxyCompactList}\small\item\em Añade un problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_set_a80e552f84e64c3f03a92675927b8cae4}{Update}} (string id\+\_\+problema, int r)
+\begin{DoxyCompactList}\small\item\em Actualiza el problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_set_aa0cbffad78647021f0c5c1deb3db2654}{Increase\+Total\+Sends}} (string id\+\_\+problema)
+\begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+totales (y ratio). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_set_a720c17f1bd3d8fd5628e0015ac734b07}{Increase\+Solved\+Sends}} (string id\+\_\+problema)
+\begin{DoxyCompactList}\small\item\em Modificadora de envios\+\_\+exito (y ratio). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_set_adac211be4426d3b9395de055bbf43131}{Add\+From\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_problem_set_ab45006ff08ba3c36bc3c08a427391b69}{List\+Problem\+Set\+By\+Ratio}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_problem_set_a7ef02642813914f7ca93c93835ddcda3}{List\+Problem}} (string id\+\_\+problema)
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un conjunto de problemas ordenados por id. 
+
+Definición en la línea 21 del archivo Problem\+Set.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_problem_set_a3eadb6c62386acf9948b95bb6d05b5ae}\label{class_problem_set_a3eadb6c62386acf9948b95bb6d05b5ae}} 
+\index{Problem\+Set@{Problem\+Set}!Problem\+Set@{Problem\+Set}}
+\index{Problem\+Set@{Problem\+Set}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Problem\+Set()}{ProblemSet()}}
+{\footnotesize\ttfamily Problem\+Set\+::\+Problem\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de problemas vacío. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_problem_set_a51774196cd2b29bfc0e0adcca8dd325d}\label{class_problem_set_a51774196cd2b29bfc0e0adcca8dd325d}} 
+\index{Problem\+Set@{Problem\+Set}!Exist@{Exist}}
+\index{Exist@{Exist}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Exist()}{Exist()}}
+{\footnotesize\ttfamily bool Problem\+Set\+::\+Exist (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de problema en \mbox{\hyperlink{class_problem_set}{Problem\+Set}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve un booleano conforme si existe el problema con id = id\+\_\+problema en el parámetro implícito. True si existe y false en caso contrario. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_ac173526274dc6d5f88623c3dd2630cd6}\label{class_problem_set_ac173526274dc6d5f88623c3dd2630cd6}} 
+\index{Problem\+Set@{Problem\+Set}!Size@{Size}}
+\index{Size@{Size}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily int Problem\+Set\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño del conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por el canal estandar de salida el tamaño del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_a8fd763c7dbee07a8f0101119f23e694a}\label{class_problem_set_a8fd763c7dbee07a8f0101119f23e694a}} 
+\index{Problem\+Set@{Problem\+Set}!Get\+Problem\+Id@{Get\+Problem\+Id}}
+\index{Get\+Problem\+Id@{Get\+Problem\+Id}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Get\+Problem\+Id()}{GetProblemId()}}
+{\footnotesize\ttfamily string Problem\+Set\+::\+Get\+Problem\+Id (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del identificador del problema. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío y el problema con id = id\+\_\+problema existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el problema con id = id\+\_\+problema y si lo encuentra retorna el id de este. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_a33746a7a5aefdce5a4e8a5bf597c84f1}\label{class_problem_set_a33746a7a5aefdce5a4e8a5bf597c84f1}} 
+\index{Problem\+Set@{Problem\+Set}!Get\+Envios\+Totales@{Get\+Envios\+Totales}}
+\index{Get\+Envios\+Totales@{Get\+Envios\+Totales}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Get\+Envios\+Totales()}{GetEnviosTotales()}}
+{\footnotesize\ttfamily int Problem\+Set\+::\+Get\+Envios\+Totales (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de los envios totales. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío y el problema con id = id\+\_\+problema existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el problema con id = id\+\_\+problema y si lo encuentra retorna los envios\+\_\+totales de este. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_aaf4917f4ebb7dc317ca91f1ecdbc2fe9}\label{class_problem_set_aaf4917f4ebb7dc317ca91f1ecdbc2fe9}} 
+\index{Problem\+Set@{Problem\+Set}!Get\+Envios\+Exito@{Get\+Envios\+Exito}}
+\index{Get\+Envios\+Exito@{Get\+Envios\+Exito}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Get\+Envios\+Exito()}{GetEnviosExito()}}
+{\footnotesize\ttfamily int Problem\+Set\+::\+Get\+Envios\+Exito (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de los envios exito. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío y el problema con id = id\+\_\+problema existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el problema con id = id\+\_\+problema y si lo encuentra retorna los envios\+\_\+exito de este. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_aae2358d2149c1f703d97f2882ae2bec6}\label{class_problem_set_aae2358d2149c1f703d97f2882ae2bec6}} 
+\index{Problem\+Set@{Problem\+Set}!Get\+Ratio@{Get\+Ratio}}
+\index{Get\+Ratio@{Get\+Ratio}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Get\+Ratio()}{GetRatio()}}
+{\footnotesize\ttfamily double Problem\+Set\+::\+Get\+Ratio (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del ratio. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío y el problema con id = id\+\_\+problema existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el problema con id = id\+\_\+problema y si lo encuentra retorna el ratio de este. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_ae41f8319bc9355824cf982879c7d0453}\label{class_problem_set_ae41f8319bc9355824cf982879c7d0453}} 
+\index{Problem\+Set@{Problem\+Set}!Add@{Add}}
+\index{Add@{Add}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily int Problem\+Set\+::\+Add (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption})}
+
+
+
+Añade un problema. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacio. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si el id\+\_\+problema no estaba en el parámetro implícito, lo introduce y retorna 0. En caso que ya existiera retorna -\/1. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_a80e552f84e64c3f03a92675927b8cae4}\label{class_problem_set_a80e552f84e64c3f03a92675927b8cae4}} 
+\index{Problem\+Set@{Problem\+Set}!Update@{Update}}
+\index{Update@{Update}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Problem\+Set\+::\+Update (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Actualiza el problema. 
+
+\begin{DoxyPrecond}{Precondición}
+El problema con id = id\+\_\+problema existe y r = 0 (fallo) o r = 1 (a\+Cierto). (r es la información del envio de un problema). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si r vale 1\+:
+\begin{DoxyItemize}
+\item Se incrementará la variable enviostotales, enviosexito, y se actualizará el ratio del problema con id = id\+\_\+problema del parámetro implícito. Si r vale 0\+:
+\item Se incrementará la variable enviostotales, y se actualizará el ratio del problema con id = id\+\_\+problema del parámetro implícito. 
+\end{DoxyItemize}
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_aa0cbffad78647021f0c5c1deb3db2654}\label{class_problem_set_aa0cbffad78647021f0c5c1deb3db2654}} 
+\index{Problem\+Set@{Problem\+Set}!Increase\+Total\+Sends@{Increase\+Total\+Sends}}
+\index{Increase\+Total\+Sends@{Increase\+Total\+Sends}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Increase\+Total\+Sends()}{IncreaseTotalSends()}}
+{\footnotesize\ttfamily void Problem\+Set\+::\+Increase\+Total\+Sends (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption})}
+
+
+
+Modificadora de envios\+\_\+totales (y ratio). 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacio. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el problema con id = id\+\_\+problema y si lo encuentra incrementa los envios totales y el ratio del problema con id = id\+\_\+problema del parámetro ímplicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_a720c17f1bd3d8fd5628e0015ac734b07}\label{class_problem_set_a720c17f1bd3d8fd5628e0015ac734b07}} 
+\index{Problem\+Set@{Problem\+Set}!Increase\+Solved\+Sends@{Increase\+Solved\+Sends}}
+\index{Increase\+Solved\+Sends@{Increase\+Solved\+Sends}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Increase\+Solved\+Sends()}{IncreaseSolvedSends()}}
+{\footnotesize\ttfamily void Problem\+Set\+::\+Increase\+Solved\+Sends (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption})}
+
+
+
+Modificadora de envios\+\_\+exito (y ratio). 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacio. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Busca en el parámetro implícito el problema con id = id\+\_\+problema y si lo encuentra incrementaa los envios\+\_\+exito, los envios\+\_\+totales y el ratio del problema con id = id\+\_\+problema del parámetro ímplicito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_adac211be4426d3b9395de055bbf43131}\label{class_problem_set_adac211be4426d3b9395de055bbf43131}} 
+\index{Problem\+Set@{Problem\+Set}!Add\+From\+Console@{Add\+From\+Console}}
+\index{Add\+From\+Console@{Add\+From\+Console}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{Add\+From\+Console()}{AddFromConsole()}}
+{\footnotesize\ttfamily void Problem\+Set\+::\+Add\+From\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay preparado en el canal estandar de entrada un int = P que es el número de problemas a leer + P strings (identificadores de problemas). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el conjunto de problemas con los P problemas con sus respectivos identificadores. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_ab45006ff08ba3c36bc3c08a427391b69}\label{class_problem_set_ab45006ff08ba3c36bc3c08a427391b69}} 
+\index{Problem\+Set@{Problem\+Set}!List\+Problem\+Set\+By\+Ratio@{List\+Problem\+Set\+By\+Ratio}}
+\index{List\+Problem\+Set\+By\+Ratio@{List\+Problem\+Set\+By\+Ratio}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{List\+Problem\+Set\+By\+Ratio()}{ListProblemSetByRatio()}}
+{\footnotesize\ttfamily void Problem\+Set\+::\+List\+Problem\+Set\+By\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por el canal estandar de salida los atributos (envios\+\_\+totales, envios\+\_\+exito, ratio) de los problemas del parámetro implícito ordenados crecientemente por ratio y en caso de empate por string id\+\_\+problema. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_problem_set_a7ef02642813914f7ca93c93835ddcda3}\label{class_problem_set_a7ef02642813914f7ca93c93835ddcda3}} 
+\index{Problem\+Set@{Problem\+Set}!List\+Problem@{List\+Problem}}
+\index{List\+Problem@{List\+Problem}!Problem\+Set@{Problem\+Set}}
+\subsubsection{\texorpdfstring{List\+Problem()}{ListProblem()}}
+{\footnotesize\ttfamily int Problem\+Set\+::\+List\+Problem (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+problema }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+El string id\+\_\+problema no es vacío. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si el problema con id = id\+\_\+problema del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios\+\_\+totales, envios\+\_\+exito, ratio) de este. Retornará -\/1 en caso contrario. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_problem_set_8hh}{Problem\+Set.\+hh}}\end{DoxyCompactItemize}

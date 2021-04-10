@@ -1,0 +1,136 @@
+\hypertarget{class_sesion}{}\section{Referencia de la Clase Sesion}
+\label{class_sesion}\index{Sesion@{Sesion}}
+
+
+Representa una sesion con el numero de problemas en esta contenidos en un \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sesion_a91a29b1563a9f089d6dc50933281a968}{Sesion}} (string id\+\_\+sesion)
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_a0bdd1600ecaf2f98a74ba30611a3bb6f}{Make\+Bin\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Crea el \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de problemas. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_sesion_a9f3c532f36fb49a6caa5dd82b9ee9a3f}{Get\+Sesion\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del identificador de la sesión. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sesion_ad770a0d4c75b0b2d70fa6c5cdcf336ec}{Get\+Num\+Problems}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del número de problemas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_af8f21957c77c2a3f7a1f923f2779cc41}{Get\+Problems\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de la sesión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sesion_abd39f61f782fffbaa2e151e0e51b9636}{Print\+Sesion}} () const
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa una sesion con el numero de problemas en esta contenidos en un \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}. 
+
+Definición en la línea 18 del archivo Sesion.\+hh.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_sesion_a91a29b1563a9f089d6dc50933281a968}\label{class_sesion_a91a29b1563a9f089d6dc50933281a968}} 
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\index{Sesion@{Sesion}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Sesion()}{Sesion()}}
+{\footnotesize\ttfamily Sesion\+::\+Sesion (\begin{DoxyParamCaption}\item[{string}]{id\+\_\+sesion }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+La string id no es vacia. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una sesion con id = id\+\_\+sesion, num\+\_\+problemas = 0 y un \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de strings (de id\+\_\+problemas) vacío. 
+\end{DoxyPostcond}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_sesion_a0bdd1600ecaf2f98a74ba30611a3bb6f}\label{class_sesion_a0bdd1600ecaf2f98a74ba30611a3bb6f}} 
+\index{Sesion@{Sesion}!Make\+Bin\+Tree@{Make\+Bin\+Tree}}
+\index{Make\+Bin\+Tree@{Make\+Bin\+Tree}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Make\+Bin\+Tree()}{MakeBinTree()}}
+{\footnotesize\ttfamily void Sesion\+::\+Make\+Bin\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea el \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de problemas. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de strings de problemas siguiendo una estructura dada en postorden del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_a9f3c532f36fb49a6caa5dd82b9ee9a3f}\label{class_sesion_a9f3c532f36fb49a6caa5dd82b9ee9a3f}} 
+\index{Sesion@{Sesion}!Get\+Sesion\+Id@{Get\+Sesion\+Id}}
+\index{Get\+Sesion\+Id@{Get\+Sesion\+Id}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Get\+Sesion\+Id()}{GetSesionId()}}
+{\footnotesize\ttfamily string Sesion\+::\+Get\+Sesion\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del identificador de la sesión. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el identificador del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_ad770a0d4c75b0b2d70fa6c5cdcf336ec}\label{class_sesion_ad770a0d4c75b0b2d70fa6c5cdcf336ec}} 
+\index{Sesion@{Sesion}!Get\+Num\+Problems@{Get\+Num\+Problems}}
+\index{Get\+Num\+Problems@{Get\+Num\+Problems}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Get\+Num\+Problems()}{GetNumProblems()}}
+{\footnotesize\ttfamily int Sesion\+::\+Get\+Num\+Problems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número de problemas. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el número de problemas del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_af8f21957c77c2a3f7a1f923f2779cc41}\label{class_sesion_af8f21957c77c2a3f7a1f923f2779cc41}} 
+\index{Sesion@{Sesion}!Get\+Problems\+Id@{Get\+Problems\+Id}}
+\index{Get\+Problems\+Id@{Get\+Problems\+Id}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Get\+Problems\+Id()}{GetProblemsId()}}
+{\footnotesize\ttfamily void Sesion\+::\+Get\+Problems\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}} de la sesión. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado són los identificadores de los problemas que forman el \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}, siguiendo la estructura en postorden, del parámetro implícito. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_sesion_abd39f61f782fffbaa2e151e0e51b9636}\label{class_sesion_abd39f61f782fffbaa2e151e0e51b9636}} 
+\index{Sesion@{Sesion}!Print\+Sesion@{Print\+Sesion}}
+\index{Print\+Sesion@{Print\+Sesion}!Sesion@{Sesion}}
+\subsubsection{\texorpdfstring{Print\+Sesion()}{PrintSesion()}}
+{\footnotesize\ttfamily void Sesion\+::\+Print\+Sesion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos (num\+\_\+problemas + id de dichos problemas) del parametro implícito en el canal estandar de salida. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sesion_8hh}{Sesion.\+hh}}\end{DoxyCompactItemize}

@@ -10,10 +10,10 @@
     @brief Programa principal EVALUATOR: plataforma de gestión de problemas y cursos de programación.
 */
 
+#ifndef NO_DIAGRAM
 #include <iostream>
-#include "ProblemSet.hh"
-#include "SesionSet.hh"
-#include "CourseSet.hh"
+#endif
+
 #include "UserSet.hh"
 
 using namespace std;
@@ -219,6 +219,9 @@ int main() {
                     break;
                     
                     
+int CourseSet::GetSesion	(	int 	id_curso,
+string 	id_problema 
+)		const
                 case ENVIO:
                     int r;
                     cin >> u >> p >> r;
