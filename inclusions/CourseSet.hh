@@ -25,7 +25,7 @@ public:
     //Constructora
     
     /** @brief  Creadora por defecto
-        \pre <em>Cierto.</em>.
+        \pre <em>Cierto.</em>
         \post El resultado es un conjunto de cursos vacío.
     */
     CourseSet();
@@ -122,7 +122,7 @@ public:
         \pre El parámetro implícito no es vacío.
         \post Se ha escrito por el canal estandar de salida los atributos (num_usuarios_completados, num_usuarios_inscritos, num_sesiones + id_sesiones de estas en el orden que se creó el curso) de los cursos del parámetro implícito.
     */
-    void ListCourseSet();
+    void ListCourseSet();   //DONE
     
     /** @brief Operación de escritura.
         \pre El int id_curso no es vacío.
@@ -130,6 +130,7 @@ public:
                 orden que se creó el curso) de este. Retornará -1 en caso contrario.
     */
     int ListCourse (int id_curso);
+
     
 private:
     vector<Course> Course_vec;

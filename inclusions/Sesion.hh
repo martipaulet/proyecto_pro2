@@ -23,21 +23,9 @@ public:
     
     /** @brief  Creadora por defecto.
         \pre La string id no es vacia.
-        \post El resultado es una sesion con id = id_sesion, num_problemas = 0 y un BinTree de strings (de id_problemas) vacío. 
+        \post El resultado es una sesion con id = id_sesion, num_problemas = 0 y un BinTree de strings (de id_problemas). 
     */
-    Sesion(string id_sesion);
-    
-    
-    
-    //Modificadora
-    
-    /** @brief Crea el BinTree de problemas
-        \pre <em>Cierto.</em>
-        \post El resultado es un BinTree de strings de problemas siguiendo una estructura dada en postorden del parámetro implícito.
-    */
-    void MakeBinTree();
-    
-    
+    Sesion(string id_sesion);   //DONE
     
     
     //Consultoras
@@ -46,38 +34,42 @@ public:
         \pre <em>Cierto.</em>
         \post El resultado es el identificador del parámetro implícito.
     */
-    string GetSesionId() const;
+    string GetSesionId() const; //DONE
     
     
     /** @brief Consultora del número de problemas.
         \pre <em>Cierto.</em>
         \post El resultado es el número de problemas del parámetro implícito.
     */
-    int GetNumProblems() const;
-    
-    
-    /** @brief Consultora del BinTree de la sesión.
-        \pre <em>Cierto.</em>
-        \post El resultado són los identificadores de los problemas que forman el BinTree, siguiendo la estructura en postorden, del parámetro implícito.
-    */
-    void GetProblemsId() const;
-    
-    
-    
+    int GetNumProblems() const; //DONE
     
     //Escritura
     
-    
     /** @brief Operación de escritura.
         \pre <em>Cierto.</em>
-        \post Se han escrito los atributos (num_problemas + id de dichos problemas) del parametro implícito en el canal estandar de salida.
+        \post Se ha escrito los atributos del parámetro implícito en el canal estandar de salida.
     */
     void PrintSesion() const;
+    
+    
+
     
     
 private:
     string id;
     int num_problemas;
-    BinTree<string> BinTree_problemas;      // Leer en Postorden
+    BinTree<string> BinTree_Problemas;      // Leer en Postorden
+    
+    /** @brief Crea el BinTree de problemas
+        \pre <em>Cierto.</em>
+        \post El resultado es un BinTree de strings de problemas siguiendo una estructura dada en postorden.
+    */
+    static void MakeBinTree(BinTree<string>& a, int& num_problemas);    //DONE
+    
+    /** @brief Operación de escritura.
+        \pre <em>Cierto.</em>
+        \post Se han escrito el atributo (BinTree_Problemas) con los identificadores de los problemas el canal estandar de salida.
+    */
+    static void PrintBinTree_Problemas(const BinTree<string>& a);    //DONE
 };
 #endif

@@ -39,13 +39,13 @@ public:
         \pre El string id_problema no es vacío.
         \post Devuelve un booleano conforme si existe el problema con id = id_problema en el parámetro implícito. True si existe y false en caso contrario.
     */
-    bool Exist(string id_problema) const;
+    bool Exist(string id_problema) const;   //DONE
     
     /** @brief Consultora del tamaño del conjunto.
         \pre <em>Cierto.</em>
         \post Se ha escrito por el canal estandar de salida el tamaño del parámetro implícito.
     */
-    int Size() const;   
+    int Size() const;   //DONE
     
         
     /** @brief Consultora del identificador del problema.
@@ -82,7 +82,7 @@ public:
         \pre El string id_problema no es vacio.
         \post Si el id_problema no estaba en el parámetro implícito, lo introduce y retorna 0. En caso que ya existiera retorna -1.
     */
-    int Add(string id_problema);
+    int Add(string id_problema);    //DONE
     
         
     /** @brief Actualiza el problema. 
@@ -98,13 +98,13 @@ public:
         \pre El string id_problema no es vacio.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra incrementa los envios totales y el ratio del problema con id = id_problema del parámetro ímplicito.
     */
-    void IncreaseTotalSends(string id_problema);
+    void IncreaseTotalSends(string id_problema);    //DONE
     
     /** @brief Modificadora de envios_exito (y ratio).
         \pre El string id_problema no es vacio.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra incrementaa los envios_exito, los envios_totales y el ratio del problema con id = id_problema del parámetro ímplicito.
     */
-    void IncreaseSolvedSends(string id_problema);
+    void IncreaseSolvedSends(string id_problema);   //DONE
     
     
     
@@ -115,19 +115,19 @@ public:
         \pre Hay preparado en el canal estandar de entrada un int = P que es el número de problemas a leer + P strings (identificadores de problemas).
         \post Devuelve el conjunto de problemas con los P problemas con sus respectivos identificadores.
     */
-    void AddFromConsole();
+    void AddFromConsole();  //DONE
     
     /** @brief Operación de escritura.
         \pre <em>Cierto.</em>
         \post Se ha escrito por el canal estandar de salida los atributos (envios_totales, envios_exito, ratio) de los problemas del parámetro implícito ordenados crecientemente por ratio y en caso de empate por string id_problema.
     */
-    void ListProblemSetByRatio();
+    void ListProblemSetByRatio();   //DONE 
     
     /** @brief Operación de escritura.
         \pre El string id_problema no es vacío.
         \post Si el problema con id = id_problema del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios_totales, envios_exito, ratio) de este. Retornará -1 en caso contrario.
     */
-    int ListProblem(string id_problema);
+    int ListProblem(string id_problema);    //DONE
     
     
 private:

@@ -26,7 +26,7 @@ public:
         \pre <em>Cierto.</em>
         \post El resultado es un curso sin id, num_usuarios_inscritos = 0, num_usuarios_completado = 0 y la lista de problemas vacia.
     */
-    Course();
+    Course();   //DONE
     
     
     
@@ -36,13 +36,13 @@ public:
         \pre <em>Cierto.</em>
         \post El resultado es el número de usuarios que han completado el parámetro implícito.
     */
-    int GetNumUsersDone() const;
+    int GetNumUsersDone() const;    //DONE
     
     /** @brief Consultora del número de usuarios inscritos.
         \pre <em>Cierto.</em>
         \post El resultado es el número de usuarios inscritos (actualmente) en el parámetro implícito.
     */
-    int GetNumUsersIn() const;
+    int GetNumUsersIn() const;  //DONE
     
     
     /** @brief Consultora de la sesion que contiene el problema id_problema en el parametro implícito.
@@ -52,6 +52,9 @@ public:
     void GetSesion(string id_problema) const;
     
     
+    int GetSesionListSize() const;  //DONE
+    
+    
     
     //Modificadoras
     
@@ -59,38 +62,50 @@ public:
         \pre <em>Cierto.</em>
         \post Se incrementará el número de usuarios con el parámetro ímplicito completado.
     */
-    void IncreaseNumUsersDone();
+    void IncreaseNumUsersDone();    //DONE
     
     /** @brief Modificadora del número de usuarios inscritos.
         \pre <em>Cierto.</em>
         \post Se incrementará el número de usuarios inscritos (actualmente) en el parámetro implícito.
     */
-    void IncreaseNumUsersIn();
+    void IncreaseNumUsersIn();  //DONE
     
     /** @brief Modificadora del número de usuarios inscritos.
         \pre <em>Cierto.</em>
         \post Se decrementará el número de usuarios inscritos (actualmente) en  el parámetro implícito.
     */
-    void DecreaseNumUsersIn();
-    
+    void DecreaseNumUsersIn();  //DONE
+        
 
-    
     //Escritura
     
     /** @brief Operación de escritura.
         \pre <em>Cierto.</em>
-        \post Se han escrito los atributos (num_usuarios_completados, num_usuarios_inscritos, num_sesiones + id_sesiones de estas en el orden que se creó el curso) del parametro implícito en el canal estandar de salida. 
+        \post Se han escrito los atributos (num_usuarios_completados, num_usuarios_inscritos, num_sesiones + id_sesiones de estas en el orden que se creó el curso) del parametro implícito con identificador = id_course en el canal estandar de salida. 
     */
-    void PrintCourse() const;
+    void PrintCourse(int id_course) const;
+    
+
     
     
     
 private:
     int num_usuarios_completados;
     int num_usuarios_inscritos;
-    list<string> sesiones;
+    list<string> Course_sesion_list;
     
     typedef map<string, string> Course_sesion_map_t;
     Course_sesion_map_t Course_sesion_map;                        // Array[id del problema=string] = id_sesion
+    
+    /** @brief Operación de escritura.
+        \pre <em>Cierto.</em>
+        \post Se han escrito los strings de la lista Course_sesion_list del parametro implícito en el canal estandar de salida. 
+    */
+        
+    void InsertOnList(string id_sesion);    //DONE
+    
+    static void PrintCourseSesionList(const list<string>& Course_sesion_list); //DONE
+    
+
 };
 #endif

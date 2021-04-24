@@ -25,7 +25,7 @@ public:
         \pre El string id_problema no es vacío.
         \post El resultado es un problema con id = id_problema, envios totales = 0 , envios exito = 0 y ratio = 1.
     */
-    Problem(string id_problema);
+    Problem(string id_problema); //DONE
     
     
     
@@ -35,25 +35,25 @@ public:
         \pre <em>Cierto.</em>
         \post El resultado es el identificador del parámetro implícito.
     */
-    string GetProblemId() const;
+    string GetProblemId() const;  //DONE
     
     /** @brief Consultora de los envios totales.
         \pre <em>Cierto.</em>
         \post El resultado son los envios_totales del parámetro implícito.
     */
-    int GetEnviosTotales() const;
+    int GetEnviosTotales() const;  //DONE
     
     /** @brief Consultora de los envios exito.
         \pre <em>Cierto.</em>
         \post El resultado son los envios_exito del parámetro implícito.
     */
-    int GetEnviosExito() const;
+    int GetEnviosExito() const;  //DONE
     
     /** @brief Consultora del ratio.
         \pre <em>Cierto.</em>
         \post El resultado es el ratio del parámetro implícito.
     */
-    double GetRatio() const;
+    double GetRatio() const;    //DONE
     
     
     
@@ -63,13 +63,13 @@ public:
         \pre <em>Cierto.</em>
         \post Se incrementan los envios totales y el ratio del parámetro ímplicito.
     */
-    void IncreaseTotalSends();
+    void IncreaseTotalSends();  //DONE
     
     /** @brief Modificadora de envios_exito (y ratio).
         \pre <em>Cierto.</em>
         \post Se incrementan los envios_exito, los envios_totales y el ratio del parámetro ímplicito.
     */
-    void IncreaseSolvedSends();
+    void IncreaseSolvedSends(); //DONE
     
     
     

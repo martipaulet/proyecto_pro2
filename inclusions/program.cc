@@ -14,7 +14,10 @@
 #include <iostream>
 #endif
 
-#include "UserSet.hh"
+//#include "UserSet.hh"
+#include "ProblemSet.hh"
+#include "SesionSet.hh"
+#include "CourseSet.hh"
 
 using namespace std;
 
@@ -86,19 +89,31 @@ int main() {
 
     //INICIALIZAR OBJETOS
     ProblemSet  problemas;
+    SesionSet sesiones;
+    CourseSet   cursos;
+    
+    /*
+    ProblemSet  problemas;
     SesionSet   sesiones;
     CourseSet   cursos;
     UserSet     usuarios;
-    
+    */
     problemas.AddFromConsole();
-    sesiones.AddFromConsole();    
+    sesiones.AddFromConsole();
+    cursos.AddFromConsole();
+    
+    /*
+    problemas.AddFromConsole();
+    sesiones.AddFromConsole();
     cursos.AddFromConsole();
     usuarios.AddFromConsole();
+    */
     
     //VARIABLES AUXILIARES
     string comando;
     bool pedir_comando = true;
-    string p, s, u;
+    string p,s;
+    //string p, s, u;
     int c;
     
     //SWITCH CASE (main body)
@@ -108,28 +123,70 @@ int main() {
             // Comando válido
             switch (comandos[comando]) {
                 
-                case NUEVO_PROBLEMA:
+                case NUEVO_PROBLEMA:    //DONE
                     cin >> p;
+                    cout << "#" << comando << " " << p << endl; 
                     if (problemas.Add(p) == -1)
-                        cout << "Error al introducir el problema " << p << ", este ya existe." << endl;
+                        cout << "error el problema ya existe" << endl;
                     else 
-                        cout << "Número de problemas: " << problemas.Size() << "." <<  endl;                   
+                        cout << problemas.Size() <<  endl;                   
                     break;
-                
                     
                 case NUEVA_SESION:
                     cin >> s;
                     if (sesiones.AddOneFromConsole(s) == -1) 
-                        // AddOneFromConsole comprueba si s existe. 
-                        // - Si existe, pedirá a través de la consola los identificadores de problemas, pero no creará el BinTree ya que la sesion no se creará al estar repetida. Retornará -1
-                        // - Si no existe la sesión, pedirá a través de la consola los identificadores de problemas para construir el BinTree dentro de la sesion creada. Retornará 0 (OK)
-                        
-                        cout << "Error al introducir la sesion " << s << ", esta ya existe." << endl;
+                        cout << "error la sesion ya existe" << endl;
                     else   
-                        cout << "Número de sesiones: " << sesiones.Size() << "." << endl;
+                        cout << sesiones.Size() << endl;
                     break;
                     
                     
+                case LISTAR_PROBLEMAS:
+                    cout << "#" << comando << endl;
+                    problemas.ListProblemSetByRatio();
+                    break;
+                    
+                    
+                case ESCRIBIR_PROBLEMA:
+                    cin >> p;
+                    cout << "#" << comando << " " << p << endl;
+                    if (problemas.ListProblem(p) == -1)
+                        cout << "error: el problema no existe" << endl;                   
+                    break;
+                    
+                    
+                case LISTAR_SESIONES:
+                    cout << "#"  << comando << endl;
+                    sesiones.ListSesionSet();
+                    break;
+                    
+                    
+                case ESCRIBIR_SESION:
+                    cin >> s;
+                    cout << "#" << comando << " " << s << endl;
+                    if (sesiones.ListSesion(s) == -1)
+                        cout << "error: la sesion no existe" << endl;                      
+                    break;
+                    
+                case LISTAR_CURSOS:
+                    cout << "#" << comando <<endl;
+                    cursos.ListCourseSet();
+                    break;
+                    
+                    
+                case ESCRIBIR_CURSO:
+                    cin >> c;
+                    cout << "#" << comando << " " << c << endl;
+                    if(cursos.ListCourse(c) == -1)
+                        cout << "error: el curso no existe" << endl;                   
+                    break;
+                    
+                    
+            }
+        }
+    }
+
+ /*              
                 case NUEVO_CURSO:
                     if (cursos.AddOneFromConsole() == -1)
                         // AddOneFromConsole pedirá el número de sesiones del curso, y posteriormente pedirá los strings de todas las sesiones. 
@@ -242,42 +299,12 @@ int main() {
                     break;
                     
                     
-                case LISTAR_PROBLEMAS:
-                    problemas.ListProblemSetByRatio();
-                    break;
+
                     
                     
-                case ESCRIBIR_PROBLEMA:
-                    cin >> p;
-                    if (problemas.ListProblem(p) == -1)
-                        cout << "Error, el problema " << p << " no existe." << endl;                   
-                    break;
+               
                     
-                case LISTAR_SESIONES:
-                    //documentar
-                    sesiones.ListSesionSet();
-                    break;
-                    
-                    
-                case ESCRIBIR_SESION:
-                    cin >> s;
-                    if (sesiones.ListSesion(s) == -1)
-                        cout << "Error, la sesion " << s << " no existe." << endl;                   
-                    break;
-                    
-                    
-                case LISTAR_CURSOS:
-                    // Se listan los cursos de CourseSet.
-                    // Para cada curso
-                    cursos.ListCourseSet();
-                    break;
-                    
-                    
-                case ESCRIBIR_CURSO:
-                    cin >> c;
-                    if(cursos.ListCourse(c) == -1)
-                        cout << "Error, el curso " << c << " no existe." << endl;                   
-                    break;
+
                     
                     
                 case LISTAR_USUARIOS:
@@ -300,4 +327,5 @@ int main() {
             }                    
         } 
     }
+    */
 }
