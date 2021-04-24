@@ -47,6 +47,15 @@ public:
     bool Exist(string id_sesion) const;     //DONE
     
     
+       
+    /** @brief Consultora de la sesion con id = id_sesion del conjunto.
+        \pre <em>La sesion con id_sesion existe.</em>
+        \post Se devuelve la sesion con id = id_sesion.
+    */
+    //Sesion GetSesion(string id_sesion) const;
+    
+    
+    
     
     /** @brief Consultora del identificador de la sesión.
         \pre El string id_sesion no es vacío.
@@ -58,7 +67,7 @@ public:
         \pre El string id_sesion no es vacío.
         \post Busca en el parámetro implícito la sesión con id = id_sesion y si la encuentra retorna el número de problemas de esta.
     */
-    //int GetNumProblems(string id_sesion) const;
+    int GetNumProblems(string id_sesion);
     
     /** @brief Consultora del BinTree de la sesión.
         \pre El string id_sesion no es vacío.
@@ -82,6 +91,15 @@ public:
         \post El resultado es un BinTree de strings de problemas siguiendo una estructura dada en postorden de la sesion con id = id_sesion.
     */
     //void MakeBinTree(string id_sesion);
+    
+    void InitializeReadyToSendProblems(string id_sesion, ProblemSet& problems);
+    
+    
+    
+    
+    string InsertOnMap(string id_sesion, int i);
+    
+    
     
 
     
@@ -119,5 +137,7 @@ public:
 private:
     typedef map<string, Sesion> Sesion_map_t;
     Sesion_map_t sesion_map;                            // Array[id de la sesion=string]
+    
+    
 };
 #endif

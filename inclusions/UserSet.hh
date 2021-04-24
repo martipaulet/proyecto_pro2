@@ -38,19 +38,19 @@ public:
         \pre <em>Cierto.</em>
         \post Se ha escrito por el canal estandar de salida el tamaño del parámetro implícito.
     */
-    int Size()const;
+    int Size()const;    //DONE
      
     /** @brief Consultora de usuario en UserSet.
         \pre El string id_usuario no es vacío.
         \post Devuelve un booleano conforme si existe el usuario con id = id_usuario en el parámetro implícito. True si existe y false en caso contrario.
     */
-    bool Exist(string id_usuario)const;
+    bool Exist(string id_usuario)const; //DONE
         
     /** @brief Consultora del curso del usuario.
         \pre El string id_usuario no es vacío y el usuario con id = id_usuario existe en el parámetro implícito.
         \post Busca en el parámetro implícito el usuario con id_usuario y retornará el atributo curso_inscrito.
     */
-    int GetCurso(string id_usuario) const;
+    int GetCurso(string id_usuario) const;  //DONE
     
     
     
@@ -62,13 +62,13 @@ public:
         \post Si en el parámetro implícito ya existe el usuario con id = id_usuario, no se añadirá el usuario. Retornará -1
                 En caso contrario se añadirá el usuario con id = id_usuario al parámetro implícito. Retornará 0.
     */
-    int Add(string id_usuario);
+    int Add(string id_usuario); //DONE
     
     /** @brief Elimina un usuario del conjunto.
         \pre El string id_usuario no es vacío y el usuario con id_usuario existe.
         \post Se eliminará todo lo referente al usuario con id = id_usuario.
     */
-    void Delete(string id_usuario);
+    void Delete(string id_usuario); //DONE
     
     /** @brief Actualiza un usuario del conjunto.
         \pre El string id_usuario no es vacío y el usuario con id_usuario existe. 
@@ -108,12 +108,12 @@ public:
     void IncreaseTryedProblems(string id_usuario);
     
      /** @brief Modificadora del curso_inscritos.
-        \pre El string id_usuario no es vacía y el usuario con id = id_usuario existe en el parámetro implícito.
+        \pre El string id_usuario y el int id_curso no son vacíos y el usuario con id = id_usuario existe en el parámetro implícito y el curso con id_curso existe.
         \post Se modificará el curso_inscrito del usuario con id = id_usuario del parámetro implícito.
     */
-    void ModifyCourseIn(string id_usuario);
+    void JoinCourse(string id_usuario, int id_curso);   //DONE
     
-    
+    void InitializeReadyToSendProblems(string id_usuario, int id_curso, CourseSet& cursos, SesionSet& sesiones);
     
     
     
@@ -123,20 +123,20 @@ public:
         \pre Hay preparado en el canal estandar de entrada un int = M que es el número de usuarios a leer + M identificadores de los usuarios correspondientes.
         \post Devuelve el conjunto de usuarios completado.
     */
-    void AddFromConsole();
+    void AddFromConsole();  //DONE
     
     /** @brief Operación de escritura.
         \pre El parámetro implícito no es vacío.
         \post Se ha escrito por el canal estandar de salida los atributos (envios_totales, num_problemas_resueltos, num_problemas_intentados y curso_inscrito) de los usuarios del parámetro implícito.
     */
-    void ListUserSet();
+    void ListUserSet(); //DONE
 
     /** @brief Operación de escritura.
         \pre El string id_usuario no es vacío.
         \post Si el usuario con id = id_usuario del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios_totales, num_problemas_resueltos, num_problemas_intentados y curso_inscrito) de       
                 este. Retornará -1 en caso contrario.
     */
-    int ListUser(string id_usuario);
+    int ListUser(string id_usuario);    //DONE
     
     
     
@@ -144,7 +144,7 @@ public:
         \pre El string id_usuario no es vacío y el usuario con id = id_usuario existe.
         \post Mostrará por el canal estandar de salida la lista de problemas resueltos por el usuario con id = id_usuario de la manera id_problema: num_envios_totales.
     */
-    void ListSolvedProblems(string id_usuario);
+    void ListSolvedProblems(string id_usuario); //DONE
     
     
     /** @brief Operación de escritura.

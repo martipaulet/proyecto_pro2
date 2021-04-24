@@ -4,19 +4,21 @@ Sesion::Sesion(string id_sesion) {
     id = id_sesion;
     num_problemas = 0;
     BinTree<string> BinTree_Problemas;
-    MakeBinTree(this->BinTree_Problemas,this->num_problemas);
+    vector<string> ProblemsOnSesion_vec;
+    MakeBinTree(this->BinTree_Problemas,this->num_problemas,this->ProblemsOnSesion_vec);
 }
 
 
-void Sesion::MakeBinTree(BinTree<string>& a, int& num_problemas) {
+void Sesion::MakeBinTree(BinTree<string>& a, int& num_problemas, vector<string>& ProblemsOnSesion_vec) {
     string id_problema;
     cin >> id_problema;
     if (id_problema != "0") {
+        ProblemsOnSesion_vec.push_back(id_problema);
         a = BinTree<string>(id_problema);
         BinTree<string> esq = a.left();
-        MakeBinTree(esq, num_problemas);
+        MakeBinTree(esq, num_problemas, ProblemsOnSesion_vec);
         BinTree<string> dre = a.right();
-        MakeBinTree(dre, num_problemas);
+        MakeBinTree(dre, num_problemas, ProblemsOnSesion_vec);
         ++num_problemas;
         a = BinTree<string>(id_problema, esq, dre);
     }
@@ -42,8 +44,16 @@ string Sesion::GetSesionId() const{
 }
 
 
-int Sesion::GetNumProblems() const{
+int Sesion::GetNumProblems(){
     return this->num_problemas;
 }
+
+void Sesion::InitializeReadyToSendProblems(ProblemSet& problems) {
+    string value = BinTree_Problemas.value();
+    problems.Add(value);
+}
     
-    
+
+string Sesion::InsertOnMap(int i) {
+    return ProblemsOnSesion_vec[i];
+}

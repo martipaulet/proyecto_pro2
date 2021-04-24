@@ -47,30 +47,40 @@ public:
     */
     int Size() const;   //DONE
     
-        
+    
+    /** @brief Consultora del problema con id = id_problem del conjunto.
+        \pre <em>El problema con id_problem existe.</em>
+        \post Se devuelve el problema con id = id_problem.
+    */
+   // Problem GetProblem(string id_problem) const;
+    
+    
+    
     /** @brief Consultora del identificador del problema.
         \pre El string id_problema no es vacío y el problema con id = id_problema existe.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna el id de este.
     */
-    string GetProblemId(string id_problema) const;
+    //string GetProblemId(string id_problema) const;
     
     /** @brief Consultora de los envios totales.
         \pre El string id_problema no es vacío y el problema con id = id_problema existe.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna los envios_totales de este.
     */
-    int GetEnviosTotales(string id_problema) const;
+    //int GetEnviosTotales(string id_problema) const;
     
     /** @brief Consultora de los envios exito.
         \pre El string id_problema no es vacío y el problema con id = id_problema existe.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna los envios_exito de este.
     */
-    int GetEnviosExito(string id_problema) const;
+    //int GetEnviosExito(string id_problema) const;
     
     /** @brief Consultora del ratio.
         \pre El string id_problema no es vacío y el problema con id = id_problema existe.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna el ratio de este.
     */
-    double GetRatio(string id_problema) const;
+    //double GetRatio(string id_problema) const;
+    
+
     
     
     
@@ -123,11 +133,19 @@ public:
     */
     void ListProblemSetByRatio();   //DONE 
     
+     /** @brief Operación de escritura.
+        \pre <em>Cierto.</em>
+        \post Se ha escrito por el canal estandar de salida los atributos (envios_totales, envios_exito, ratio) de los problemas del parámetro implícito ordenados crecientemente por string id_problema.
+    */
+    void ListProblemSet();  //DONE
+    
     /** @brief Operación de escritura.
         \pre El string id_problema no es vacío.
         \post Si el problema con id = id_problema del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios_totales, envios_exito, ratio) de este. Retornará -1 en caso contrario.
     */
     int ListProblem(string id_problema);    //DONE
+    
+    void ListUserProblem() const;
     
     
 private:

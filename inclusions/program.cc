@@ -14,10 +14,11 @@
 #include <iostream>
 #endif
 
-//#include "UserSet.hh"
+
 #include "ProblemSet.hh"
 #include "SesionSet.hh"
 #include "CourseSet.hh"
+#include "UserSet.hh"
 
 using namespace std;
 
@@ -89,31 +90,22 @@ int main() {
 
     //INICIALIZAR OBJETOS
     ProblemSet  problemas;
+    problemas.AddFromConsole();
+    
     SesionSet sesiones;
-    CourseSet   cursos;
-    
-    /*
-    ProblemSet  problemas;
-    SesionSet   sesiones;
-    CourseSet   cursos;
-    UserSet     usuarios;
-    */
-    problemas.AddFromConsole();
     sesiones.AddFromConsole();
-    cursos.AddFromConsole();
     
-    /*
-    problemas.AddFromConsole();
-    sesiones.AddFromConsole();
-    cursos.AddFromConsole();
+    CourseSet   cursos;
+    cursos.AddFromConsole(sesiones);
+    
+    UserSet     usuarios;    
     usuarios.AddFromConsole();
-    */
+
     
     //VARIABLES AUXILIARES
     string comando;
     bool pedir_comando = true;
-    string p,s;
-    //string p, s, u;
+    string p,s,u;
     int c;
     
     //SWITCH CASE (main body)
@@ -123,23 +115,130 @@ int main() {
             // Comando válido
             switch (comandos[comando]) {
                 
-                case NUEVO_PROBLEMA:    //DONE
+                case NUEVO_PROBLEMA:   
                     cin >> p;
                     cout << "#" << comando << " " << p << endl; 
                     if (problemas.Add(p) == -1)
-                        cout << "error el problema ya existe" << endl;
+                        cout << "error: el problema ya existe" << endl;
                     else 
                         cout << problemas.Size() <<  endl;                   
                     break;
                     
                 case NUEVA_SESION:
                     cin >> s;
+                    cout << "#" << comando << " " <<  s << endl;
                     if (sesiones.AddOneFromConsole(s) == -1) 
-                        cout << "error la sesion ya existe" << endl;
+                        cout << "error: la sesion ya existe" << endl;
                     else   
                         cout << sesiones.Size() << endl;
                     break;
+                
                     
+                case ALTA_USUARIO:
+                    cin >> u;
+                    cout << "#" << comando << " " << u << endl;
+                    if (usuarios.Add(u) == -1)
+                        cout << "error: el usuario ya existe" << endl;
+                    else 
+                        cout << usuarios.Size() << endl; 
+                    break;
+                    
+                    
+                case BAJA_USUARIO:
+                    cin >> u;
+                    cout << "#" << comando << " " << u << endl;
+                    if (not usuarios.Exist(u))
+                         cout << "error: el usuario no existe" << endl;
+                    else {
+                        int i = usuarios.GetCurso(u);
+                        usuarios.Delete(u);
+                        if (i != 0) {
+                            cursos.DecreaseNumUsersIn(i);
+                        }
+                        //borrar todo lo referente al usuario. Si luego se da de alta un usuario con el mismo id es como si el anterior no hubiese existido.
+                        // Tener en cuenta que si el usuario está inscrito en un curso (variable curso_incrito != 0), se ha de decrementar el número de usuarios inscritos del curso 
+                        // con id=curso_inscrito (cursos.DecNumUsersIn(curso_inscrito)) 
+                        cout << usuarios.Size() << endl; 
+                    }
+                    break;
+                    
+                case INSCRIBIR_CURSO:
+                    cin >> u >> c;
+                    cout << "#" << comando << " " << u << " " << c << endl;
+                    if (not usuarios.Exist(u)) {
+                        cout << "error: el usuario no existe" << endl;
+                    }
+                    else if (not cursos.Exist(c)) {
+                        cout << "error: el curso no existe" << endl;
+                    }
+                    else if  (usuarios.GetCurso(u) != 0) {
+                        cout << "error: usuario inscrito en otro curso"<< endl;
+                    }
+                    else {
+                        usuarios.JoinCourse(u,c);
+                        cursos.IncreaseNumUsersIn(c);
+                        usuarios.InitializeReadyToSendProblems(u, c, cursos, sesiones);
+                        // Se creará user_problem_map[id_problema]= struct con 3 campos: problemas_resueltos=0, problemas_enviables a true aquellos que sean raiz del árbol, envios_totales=0
+                        cout << cursos.GetNumUsersIn(c) << endl;
+                    }
+                    break;
+                    
+                    
+                case CURSO_USUARIO:
+                    cin >> u;
+                    cout << "#" << comando << " " <<  u << endl;
+                    if (not usuarios.Exist(u))
+                        cout << "error: el usuario no existe" << endl;
+                    else 
+                        cout << usuarios.GetCurso(u) << endl;
+                    break;
+                    
+                    
+                case SESION_PROBLEMA:
+                    cin >> c >> p;
+                    cout << "#" << comando << " " <<  c << " " << p << endl;
+                    if (not cursos.Exist(c)) { 
+                        cout << "error: el curso no existe" << endl;
+                    }
+                    else if (not problemas.Exist(p)) {
+                        cout << "error: el problema no existe" << endl;
+                    }
+                    else if (not cursos.ExistProblem(c,p)) {
+                        cout << "error: el problema no pertenece al curso" << endl;
+                    }
+                    else {
+                        cursos.ProblemSesion(c,p);
+                    }
+                    break;
+                    
+                    
+                case PROBLEMAS_RESUELTOS:
+                    cin >> u;
+                    cout << "#" << comando << " " << u << endl;
+                    if (not usuarios.Exist(u))
+                        cout << "error: el usuario no existe" << endl;
+                    else {
+                        // La clase User contendrá un ProblemSet con únicamente los problemas resueltos (ProblemSet SolvedProblems)
+                        // Imprimirá la lista de problemas resueltos por el usuario de la forma id_problema:número de envios totales
+                        usuarios.ListSolvedProblems(u);
+                    }
+                    break;
+                
+                    
+                case PROBLEMAS_ENVIABLES: 
+                    cin >> u;
+                    cout << "#" << comando << " " << u << endl;
+                    if (not usuarios.Exist(u))
+                        cout << "error: el usuario no existe" << endl;
+                    else if (usuarios.GetCurso(u) == 0) {
+                        cout << "error: usuario no inscrito en ningun curso" << endl;
+                    }
+                    else {
+                        // La clase User contendrá un ProblemSet con únicamente los problemas enviables (ProblemSet ReadyToSendProblems)
+                        // Imprimirá la lista de problemas enviables por el usuario de la forma id_problema:número de envios totales
+                        usuarios.ListReadyToSendProblems(u);
+                    }
+                    break;
                     
                 case LISTAR_PROBLEMAS:
                     cout << "#" << comando << endl;
@@ -181,6 +280,26 @@ int main() {
                         cout << "error: el curso no existe" << endl;                   
                     break;
                     
+                                    
+                case LISTAR_USUARIOS:
+                    cout << "#" << comando <<endl;
+                    usuarios.ListUserSet();
+                    break;
+                    
+                    
+                case ESCRIBIR_USUARIO:
+                    cin >> u;
+                    cout << "#" << comando << " " << u << endl;
+                    if (usuarios.ListUser(u) == -1)
+                        cout << "error: el usuario no existe" << endl; 
+                    break;
+                    
+                    
+                case FIN:
+                    pedir_comando = false;
+                    break;
+                    
+                    
                     
             }
         }
@@ -198,83 +317,7 @@ int main() {
                         cout << "Nuevo curso creado con identificador: " << cursos.Size() << "." << endl;
                     break;                  
                     
-                    
-                case ALTA_USUARIO:
-                    cin >> u;
-                    if (usuarios.Add(u) == -1)
-                        cout << "Error, no se puede dar de alta a un usuario ya existente." << endl;
-                    else 
-                        
-                        cout << "Número de usuarios: " << usuarios.Size() << "." << endl; 
-                    break;
-                    
-                    
-                case BAJA_USUARIO:
-                    cin >> u;
-                    if (not usuarios.Exist(u))
-                         cout << "Error, no se puede dar de baja a un usuario inexistente." << endl;
-                    else {
-                        usuarios.Delete(u);                                                                      
-                        //borrar todo lo referente al usuario. Si luego se da de alta un usuario con el mismo id es como si el anterior no hubiese existido.
-                        // Tener en cuenta que si el usuario está inscrito en un curso (variable curso_incrito != 0), se ha de decrementar el número de usuarios inscritos del curso 
-                        // con id=curso_inscrito (cursos.DecNumUsersIn(curso_inscrito)) 
-                        cout << "Número de usuarios: " << usuarios.Size() << "." << endl; 
-                    }
-                    break;
-                    
-                    
-                case INSCRIBIR_CURSO:
-                    cin >> u >> c;
-                    if ((not usuarios.Exist(u)) or (not cursos.Exist(c)) or (usuarios.GetCurso(u) != 0)) 
-                        cout << "Error al intentar inscribir el usuario: " << u << " en el curso: " << c << "." << endl;
-                    else 
-                        // Se creará user_problem_map[id_problema]= struct con 3 campos: problemas_resueltos=0, problemas_enviables a true aquellos que sean raiz del árbol, envios_totales=0
-                        cout << "El número de usuarios en el curso " << c << " son " << cursos.GetNumUsersIn(c) << "." << endl;
-                    break;
-                    
-                    
-                case CURSO_USUARIO:
-                    cin >> u;
-                    if (not usuarios.Exist(u))
-                        cout << "Error, el usuario " << u << " no existe." << endl;
-                    else 
-                        cout << "Usuario: " << u << " inscrito en el curso: " << usuarios.GetCurso(u) << "." << endl;
-                    break;
-                    
-                    
-                case SESION_PROBLEMA:
-                    cin >> c >> p;
-                    if ((not cursos.Exist(c)) or (not problemas.Exist(p)) or (not cursos.ExistProblem(c, p)))      
-                        // cursos.ExistProblem(c,p) buscará en curso_sesion_map.find(id_problema)
-                        cout << "Error al consultar el problema: " << p << " en el curso: " << c << "." << endl;
-                    else 
-                        cout << "La sesion del curso: " << c << " y el problema: " << p << " es: " << cursos.GetSesion(c, p) << endl;
-                    break;
-                    
-                    
-                case PROBLEMAS_RESUELTOS:
-                    cin >> u;
-                    if (not usuarios.Exist(u))
-                        cout << "Error, no existe el usuario: " << u << "." << endl;
-                    else {
-                        // La clase User contendrá un ProblemSet con únicamente los problemas resueltos (ProblemSet SolvedProblems)
-                        // Imprimirá la lista de problemas resueltos por el usuario de la forma id_problema:número de envios totales
-                        usuarios.ListSolvedProblems(u);
-                    }
-                    break;
-                    
-                    
-                case PROBLEMAS_ENVIABLES: 
-                    cin >> u;
-                    if (not usuarios.Exist(u))
-                        cout << "Error, no existe el usuario: " << u << "." << endl;
-                    else {
-                        // La clase User contendrá un ProblemSet con únicamente los problemas enviables (ProblemSet ReadyToSendProblems)
-                        // Imprimirá la lista de problemas enviables por el usuario de la forma id_problema:número de envios totales
-                        usuarios.ListReadyToSendProblems(u);
-                    }
-                    break;
-                    
+    
                 case ENVIO:
                     int r;
                     cin >> u >> p >> r;
@@ -298,34 +341,5 @@ int main() {
                     problemas.Update(p, r);
                     break;
                     
-                    
-
-                    
-                    
-               
-                    
-
-                    
-                    
-                case LISTAR_USUARIOS:
-                    //documentar
-                    usuarios.ListUserSet();
-                    break;
-                    
-                    
-                case ESCRIBIR_USUARIO:
-                    cin >> u;
-                    if (usuarios.ListUser(u) == -1)
-                        cout << "Error, el usuario " << u << " no existe." << endl; 
-                    break;
-                    
-                    
-                case FIN:
-                    pedir_comando = false;
-                    break;
-                    
-            }                    
-        } 
-    }
     */
 }

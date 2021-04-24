@@ -40,3 +40,7 @@ void Problem::PrintProblem() const{
     cout << id <<"(" << envios_totales << "," << envios_exito << "," << ratio <<")" << endl;
     
 }
+
+void Problem::PrintUserProblem() const{
+    cout << id << "(" << envios_totales << ")" << endl;
+}

@@ -19,6 +19,12 @@ int ProblemSet::Size() const{
     return problem_map.size();
 }
 
+/*
+Problem ProblemSet::GetProblem(string id_problema) const {
+    Problem_map_t::const_iterator it = problem_map.find(id_problema);
+    return it->second;
+}
+*/
 
 //Modificadoras
 
@@ -81,6 +87,12 @@ void ProblemSet::ListProblemSetByRatio() {
     }
 }
 
+void ProblemSet::ListProblemSet() {
+    for (Problem_map_t::iterator it = problem_map.begin(); it != problem_map.end(); ++it) {
+        it->second.PrintProblem();
+    }
+}
+
 int ProblemSet::ListProblem(string id_problema) {
     Problem_map_t::const_iterator it = problem_map.find(id_problema);
     if (it == problem_map.end()) return -1;
@@ -90,6 +102,11 @@ int ProblemSet::ListProblem(string id_problema) {
     return 0;
 }
 
+void ProblemSet::ListUserProblem() const {
+    for (Problem_map_t::const_iterator it = problem_map.begin(); it != problem_map.end(); ++it) {
+        it->second.PrintUserProblem();
+    }
+}
 
 
 

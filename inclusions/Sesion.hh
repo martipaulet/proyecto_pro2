@@ -4,10 +4,12 @@
 
 #ifndef _SESION_HH
 #define _SESION_HH
+#include "ProblemSet.hh"
 
 #ifndef NO_DIAGRAM
 #include "BinTree.hh"
 #include <iostream>
+#include <vector>
 #endif
 
 using namespace std;
@@ -41,7 +43,16 @@ public:
         \pre <em>Cierto.</em>
         \post El resultado es el número de problemas del parámetro implícito.
     */
-    int GetNumProblems() const; //DONE
+    int GetNumProblems(); //DONE
+    
+    
+    
+    string InsertOnMap(int i);
+    
+    
+    //Modificadoras
+    
+    void InitializeReadyToSendProblems(ProblemSet& problems);
     
     //Escritura
     
@@ -49,7 +60,7 @@ public:
         \pre <em>Cierto.</em>
         \post Se ha escrito los atributos del parámetro implícito en el canal estandar de salida.
     */
-    void PrintSesion() const;
+    void PrintSesion() const;   //DONE
     
     
 
@@ -59,12 +70,13 @@ private:
     string id;
     int num_problemas;
     BinTree<string> BinTree_Problemas;      // Leer en Postorden
+    vector<string> ProblemsOnSesion_vec;
     
     /** @brief Crea el BinTree de problemas
         \pre <em>Cierto.</em>
         \post El resultado es un BinTree de strings de problemas siguiendo una estructura dada en postorden.
     */
-    static void MakeBinTree(BinTree<string>& a, int& num_problemas);    //DONE
+    static void MakeBinTree(BinTree<string>& a, int& num_problemas, vector<string>& ProblemsOnSesion_vec);    //DONE
     
     /** @brief Operación de escritura.
         \pre <em>Cierto.</em>

@@ -82,6 +82,9 @@ public:
     void PrintProblem() const;
     
     
+    void PrintUserProblem() const;
+    
+    
 private:
     string id;
     int envios_totales;

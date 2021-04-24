@@ -5,7 +5,8 @@
 #ifndef _USER_HH
 #define _USER_HH
 
-#include "ProblemSet.hh"
+
+#include "CourseSet.hh"
 
 #ifndef NO_DIAGRAM
 #include <map>
@@ -25,10 +26,10 @@ public:
     //Constructora
     
     /** @brief  Creadora por defecto.
-        \pre <em>Cierto.</em>
-        \post El resultado es un usuario con envios_totales = 0, num_problemas_resueltos = 0, num_problemas_intentados = 0 y curso_inscrito = 0. Los ProblemSet ProblemsSolved y ProblemsReadyToSend estarán vacíos. 
+        \pre <em>El string id_user no es vacío.</em>
+        \post El resultado es un usuario con id = id_user, con envios_totales = 0, num_problemas_intentados = 0 y curso_inscrito = 0. Los ProblemSet ProblemsSolved y ProblemsReadyToSend estarán vacíos. 
     */
-    User();
+    User(string id_user);
     
     
     
@@ -39,7 +40,7 @@ public:
         \pre <em>Cierto.</em>
         \post Retornará el atributo curso_inscrito del parametro implícito.
     */
-    int GetCurso() const;
+    int GetCurso() const;   //DONE
     
     /** @brief Consultora d envios_totales del usuario.
         \pre <em>Cierto.</em>
@@ -86,7 +87,10 @@ public:
         \pre <em>Cierto.</em>
         \post Se modificará el curso_inscrito del parámetro implícito.
     */
-    void ModifyCourseIn();
+    void JoinCourse(int id_curso); //DONE
+    
+    void InitializeReadyToSendProblems(int id_course, CourseSet& cursos, SesionSet& sesiones);
+    
     
     
     //Escritura
@@ -97,10 +101,14 @@ public:
     */
     void PrintUser() const;
     
+    void ListSolvedProblems(); //DONE
+    
+    void ListReadyToSendProblems(); //DONE
     
 private:
+    string id;
     int envios_totales;
-    int num_problemas_resueltos;  //--> Dimension ProblemsSolved (no hace falta variable)
+    int num_problemas_resueltos;
     int num_problemas_intentados;   
     int curso_inscrito;
     

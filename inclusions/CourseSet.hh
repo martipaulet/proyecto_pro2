@@ -45,6 +45,16 @@ public:
     */
     bool Exist(int id_curso) const;
     
+       
+    /** @brief Consultora del curso con id = id_curso del conjunto.
+        \pre <em>El curso con id_curso existe.</em>
+        \post Se devuelve el curso con id = id_curso.
+    */
+    //Course GetCourse(int id_course) const;
+    
+    
+
+    
     /** @brief Consultora de problema en curso
         \pre El int id_curso y el string id_problema no són vacíos y el curso con id = id_curso y el problema con id = id_problem existen.
         \post Devuelve un booleano conforme si el problema con id = id_problem existe en el curso con id = id_curso. True si existe y false en caso contrario.
@@ -56,7 +66,7 @@ public:
         \pre El int id_curso no es vacío.
         \post Busca en el parámetro implícito el curso con id = id_curso y si lo encuentra retorna el número de usuarios que lo han completado.
     */
-    int GetNumUsersDone(int id_curso) const;
+    //int GetNumUsersDone(int id_curso) const;
     
     /** @brief Consultora del número de usuarios inscritos.
         \pre El int id_curso no es vacío.
@@ -68,7 +78,8 @@ public:
         \pre El int id_curso y el problema id_problema no són vacíos.
         \post Busca en el parámetro implícito el curso cond id = id_curso y si lo encuentra retorna la sesión en la que se encuentra el problema con id = id_problema en el curso id_curso.
     */
-    int GetSesion(int id_curso, string id_problema) const;
+    //int GetSesion(int id_curso, string id_problema) const;
+    
     
     
     
@@ -93,22 +104,25 @@ public:
         \pre El int id_curso no es vacío y el curso con id = id_curso existe en el parámetro implícito.
         \post Se incrementará el número de usuarios del curso con id = id_curso del parámetro ímplicito con este completado.
     */
-    void IncreaseNumUsersDone(int id_curso);
+    void IncreaseNumUsersDone(int id_curso);    //DONE
     
     /** @brief Modificadora del número de usuarios inscritos.
         \pre El int id_curso no es vacío y el curso con id = id_curso existe en el parámetro implícito.
         \post Se incrementará el número de usuarios inscritos (actualmente) del curso id = id_curso del parámetro implícito.
     */
-    void IncreaseNumUsersIn(int id_curso);
+    void IncreaseNumUsersIn(int id_curso);  //DONE
     
     /** @brief Modificadora del número de usuarios inscritos.
         \pre El int id_curso no es vacío y el curso con id = id_curso existe en el parámetro implícito.
         \post Se decrementará el número de usuarios inscritos (actualmente) del curso id = id_curso  del parámetro implícito.
     */
-    void DecreaseNumUsersIn(int id_curso);
+    void DecreaseNumUsersIn(int id_curso);  //DONE
+    
+    void InitializeReadyToSendProblems(int id_course, SesionSet& sesiones, ProblemSet& problems); 
     
     
-
+    void ProblemSesion(int id_curso, string id_problema);
+    
         
     //Lectura y escritura
     
@@ -116,7 +130,7 @@ public:
         \pre Hay preparado en el canal estandar de entrada un int = N que es el número de cursos a leer + un int Sc que es el número de sesiones del curso + una secuencia de Sc identificadores de secuencias (strings).
         \post Devuelve el conjunto de problemas completado.
     */
-    void AddFromConsole();
+    void AddFromConsole(SesionSet& sesiones);  //DONE
     
     /** @brief Operación de escritura.
         \pre El parámetro implícito no es vacío.
@@ -129,7 +143,7 @@ public:
         \post Si el curso con id = id_curso del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (num_usuarios_completados, num_usuarios_inscritos, num_sesiones + id_sesiones de estas en el        
                 orden que se creó el curso) de este. Retornará -1 en caso contrario.
     */
-    int ListCourse (int id_curso);
+    int ListCourse (int id_curso);  //DONE
 
     
 private:
