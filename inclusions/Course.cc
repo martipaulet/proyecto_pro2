@@ -1,18 +1,27 @@
 #include "Course.hh"
 
-Course::Course(SesionSet& sesiones) {
+Course::Course() {
     num_usuarios_completados = 0;
     num_usuarios_inscritos = 0;
+}
+
+void Course::Read() {        //HACER
     int sc;
     cin >> sc;
     for (int i = 0; i < sc; ++i) {
         string id_sesion;
         cin >> id_sesion;
         InsertOnList(id_sesion);
-        InsertOnMap(id_sesion,sesiones);
     }
 }
 
+bool Course::Validate(SesionSet& sesiones) {
+    bool valido = true;
+    for (list<string>::const_iterator it = Course_sesion_list.begin(); it != Course_sesion_list.end(); ++it) {
+        valido = InsertOnMap(*it, sesiones, valido);
+    }
+    return valido;    
+}
 
 int Course::GetNumUsersDone() const{
     return num_usuarios_completados;
@@ -28,14 +37,6 @@ int Course::GetSesionListSize() const{
     return Course_sesion_list.size();
 }
 
-/*
-void InsertOnMap(string id_sesion) {
-    Sesion aux;
-    aux.GetSesion(id_sesion);
-    
-    }
-}
-*/
 
 void Course::InitializeReadyToSendProblems(SesionSet& sesiones, ProblemSet& problems){
     for (list<string>::const_iterator it = Course_sesion_list.begin(); it != Course_sesion_list.end(); ++it) {
@@ -73,11 +74,16 @@ void Course::InsertOnList(string id_sesion) {
     Course_sesion_list.push_back(id_sesion);
 }
 
-void Course::InsertOnMap(string id_sesion, SesionSet& sesiones) {
+bool Course::InsertOnMap(string id_sesion, SesionSet& sesiones, bool& valido) {
     int n = sesiones.GetNumProblems(id_sesion);
     for (int i = 0; i < n; ++i) {
-        Course_sesion_map.insert(make_pair(sesiones.InsertOnMap(id_sesion,i), id_sesion));
+        auto p = Course_sesion_map.insert(make_pair(sesiones.InsertOnMap(id_sesion,i), id_sesion));
+        if (not p.second) {
+            valido = false;
+            i = n;
+        }
     }
+    return valido;
 }
 
 void Course::PrintCourse(int id_course) const{

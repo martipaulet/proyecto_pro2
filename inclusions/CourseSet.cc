@@ -1,6 +1,7 @@
 #include "CourseSet.hh"
 
 
+
 CourseSet::CourseSet() {
 }
 
@@ -8,10 +9,25 @@ void CourseSet::AddFromConsole(SesionSet& sesiones) {
     int n;
     cin >> n;
     for (int i = 1; i <= n; ++i) {
-        Course aux(sesiones);
-        Course_vec.push_back(aux);
+        Course aux;
+        aux.Read();
+        bool valido = aux.Validate(sesiones);
+        if (valido)
+            Course_vec.push_back(aux);
     }
 }
+
+int CourseSet::AddOneFromConsole(SesionSet& sesiones) {
+    Course aux;
+    aux.Read();
+    bool valido = aux.Validate(sesiones);
+    if (valido) {
+        Course_vec.push_back(aux);
+        return 0;
+    }
+    else return -1;
+}
+
 
 int CourseSet::Size() const {
     return Course_vec.size();

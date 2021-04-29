@@ -12,18 +12,19 @@
 using namespace std;
 
 /** @class Problem
-    @brief Representa un problema con atributos identificador = id, envios totales = t , envios exito = e y ratio = r = (t+1)/(e+1).
+    @brief Representa un problema con atributos identificador, envios totales = t , envios exito = e y ratio = (t+1)/(e+1).
 */
 
 class Problem
 {
     
 public:
+    
     //Constructoras
     
     /** @brief  Creadora por defecto.
         \pre El string id_problema no es vacío.
-        \post El resultado es un problema con id = id_problema, envios totales = 0 , envios exito = 0 y ratio = 1.
+        \post El resultado es un problema nuevo con identificador = id_problema.
     */
     Problem(string id_problema); //DONE
     
@@ -39,19 +40,19 @@ public:
     
     /** @brief Consultora de los envios totales.
         \pre <em>Cierto.</em>
-        \post El resultado son los envios_totales del parámetro implícito.
+        \post El resultado son los envios totales realizados al parámetro implícito.
     */
     int GetEnviosTotales() const;  //DONE
     
     /** @brief Consultora de los envios exito.
         \pre <em>Cierto.</em>
-        \post El resultado son los envios_exito del parámetro implícito.
+        \post El resultado son los envios con éxito realizados al parámetro implícito.
     */
     int GetEnviosExito() const;  //DONE
     
     /** @brief Consultora del ratio.
         \pre <em>Cierto.</em>
-        \post El resultado es el ratio del parámetro implícito.
+        \post El resultado es el ratio del parámetro implícito. Este viene dado segun los envios totales realizados y los envios con exito realizados al parámetro implícito.
     */
     double GetRatio() const;    //DONE
     
@@ -59,15 +60,15 @@ public:
     
     //Modificadora
     
-    /** @brief Modificadora de envios_totales (y ratio).
+    /** @brief Modificadora de los envios totales realizados, y por tanto del ratio, del parámetro implícito.
         \pre <em>Cierto.</em>
-        \post Se incrementan los envios totales y el ratio del parámetro ímplicito.
+        \post Se incrementan los envios totales (en una unidad) y el ratio del parámetro ímplicito.
     */
     void IncreaseTotalSends();  //DONE
     
-    /** @brief Modificadora de envios_exito (y ratio).
+    /** @brief Modificadora de los envios realizados con éxito, y por tanto del ratio, del parámetro implícito.
         \pre <em>Cierto.</em>
-        \post Se incrementan los envios_exito, los envios_totales y el ratio del parámetro ímplicito.
+        \post Se incrementan los envios con éxito (en una unidad), los envios totales (en una unidad) y el ratio del parámetro ímplicito.
     */
     void IncreaseSolvedSends(); //DONE
     
@@ -77,12 +78,16 @@ public:
     
     /** @brief Operación de escritura.
         \pre <em>Cierto.</em>
-        \post Se han escrito los atributos (envios_totales, envios_exito, ratio) del parametro implícito en el canal estandar de salida.
+        \post Se ha escrito por el canal estandar de salida el identificador, los envios totales realizados, los envios con éxito realizados y el ratio del parámetro implícito. 
     */
-    void PrintProblem() const;
+    void PrintProblem() const;  //DONE
     
     
-    void PrintUserProblem() const;
+    /** @brief Operación de escritura.
+        \pre <em>Cierto.</em>
+        \post Se ha escrito el identificador y los envios totales realizados al parametro implícito en el canal estandar de salida.
+    */
+    void PrintUserProblem() const;  //DONE
     
     
 private:

@@ -133,6 +133,17 @@ int main() {
                         cout << sesiones.Size() << endl;
                     break;
                 
+                case NUEVO_CURSO:
+                    cout << "#" << comando << endl;
+                    if (cursos.AddOneFromConsole(sesiones) == -1)
+                        // AddOneFromConsole pedirá el número de sesiones del curso, y posteriormente pedirá los strings de todas las sesiones. 
+                        // - Si en el nuevo curso hay intersección de problemas entre sesiones, no se creará el curso. Retornará -1
+                        // - Si no hay intersección de problemas entre sesiones, se creará el curso. Dentro del curso rellenaremos el curso_sesion_map, con key id_problema(string), y value id_sesion(string). 
+                        //      Después de añadirlo, el identificador del curso será cursos.Size(). Retornará 0 (Ok)
+                        cout << "error: al introducir el curso" << endl;
+                    else   
+                        cout << cursos.Size() << endl;
+                    break;   
                     
                 case ALTA_USUARIO:
                     cin >> u;
@@ -306,16 +317,7 @@ int main() {
     }
 
  /*              
-                case NUEVO_CURSO:
-                    if (cursos.AddOneFromConsole() == -1)
-                        // AddOneFromConsole pedirá el número de sesiones del curso, y posteriormente pedirá los strings de todas las sesiones. 
-                        // - Si en el nuevo curso hay intersección de problemas entre sesiones, no se creará el curso. Retornará -1
-                        // - Si no hay intersección de problemas entre sesiones, se creará el curso. Dentro del curso rellenaremos el curso_sesion_map, con key id_problema(string), y value id_sesion(string). 
-                        //      Después de añadirlo, el identificador del curso será cursos.Size(). Retornará 0 (Ok)
-                        cout << "Error al introducir el curso." << endl;
-                    else   
-                        cout << "Nuevo curso creado con identificador: " << cursos.Size() << "." << endl;
-                    break;                  
+               
                     
     
                 case ENVIO:

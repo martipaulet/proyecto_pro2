@@ -1,5 +1,5 @@
 OPCIONS = -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++11
-# OPCIONS = -D_GLIBCXX_DEBUG -O2 -Wall -std=c++11
+
 
 program.exe: program.o Problem.o ProblemSet.o Sesion.o SesionSet.o Course.o CourseSet.o User.o UserSet.o
 	g++ $(OPCIONS) -o program.exe Problem.o ProblemSet.o program.o Sesion.o SesionSet.o Course.o CourseSet.o User.o UserSet.o

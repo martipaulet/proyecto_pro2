@@ -27,7 +27,7 @@ public:
         \pre <em>Cierto.</em>
         \post El resultado es un curso sin id, num_usuarios_inscritos = 0, num_usuarios_completado = 0 y su lista de sesiones.
     */
-    Course(SesionSet& sesiones);   //DONE
+    Course();   //DONE
     
     
     
@@ -57,7 +57,9 @@ public:
     
     int GetSesionListSize() const;  //DONE
     
+    bool Validate(SesionSet& sesiones);
     
+    void Read();
     
     
     //Modificadoras
@@ -112,7 +114,7 @@ private:
         \pre <em>Existe la sesion ses.</em>
         \post Se añade al mapa los problemas como key de la sesion ses (valor). 
     */
-    void InsertOnMap(string id_sesion, SesionSet& sesiones);
+    bool InsertOnMap(string id_sesion, SesionSet& sesiones, bool& valido);
     
     /** @brief Operación de escritura.
         \pre <em>Cierto.</em>

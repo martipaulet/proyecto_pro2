@@ -98,7 +98,7 @@ public:
                 Si no hay intersección de problemas entre sesiones, se creará el curso. Dentro del curso rellenaremos el curso_sesion_map, con key id_problema(string), y value id_sesion(string). 
                 Después de añadirlo, el identificador del curso será el tamaño del CourseSet. Retornará 0 (Ok)
     */
-    int AddOneFromConsole();
+    int AddOneFromConsole(SesionSet& sesiones);
     
     /** @brief Modificadora del número de usuarios completados.
         \pre El int id_curso no es vacío y el curso con id = id_curso existe en el parámetro implícito.
