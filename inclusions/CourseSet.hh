@@ -6,7 +6,7 @@
 #define _COURSESET_HH
 
 #include "Course.hh"
-#include "SesionSet.hh"
+//#include "SesionSet.hh"
 
 #ifndef NO_DIAGRAM
 #include <vector>
@@ -59,7 +59,7 @@ public:
         \pre El int id_curso y el string id_problema no són vacíos y el curso con id = id_curso y el problema con id = id_problem existen.
         \post Devuelve un booleano conforme si el problema con id = id_problem existe en el curso con id = id_curso. True si existe y false en caso contrario.
     */
-    bool ExistProblem(int id_curso, string id_problema) const;
+    bool ExistProblem(int id_curso, const string& id_problema) const;
     
         
     /** @brief Consultora del número de usuarios completados.
@@ -118,10 +118,13 @@ public:
     */
     void DecreaseNumUsersIn(int id_curso);  //DONE
     
-    void InitializeReadyToSendProblems(int id_course, SesionSet& sesiones, ProblemSet& problems); 
+    
+    void InitializeReadyToSendProblems(int id_course, SesionSet& sesiones, ProblemSet& ReadyToSend, ProblemSet& Solved);
+    
+    void UpdateReadyToSendProblems(int id_course, SesionSet& sesiones, ProblemSet& ReadyToSend, ProblemSet& Solved, const string& id_problema); 
     
     
-    void ProblemSesion(int id_curso, string id_problema);
+    void ProblemSesion(int id_curso, const string& id_problema);
     
         
     //Lectura y escritura

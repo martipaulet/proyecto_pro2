@@ -15,7 +15,7 @@ void SesionSet::AddFromConsole() {
     }
 }
 
-int SesionSet::AddOneFromConsole(string id_sesion) {
+int SesionSet::AddOneFromConsole(const string& id_sesion) {
     Sesion_map_t::iterator it = sesion_map.find(id_sesion);
     if (it != sesion_map.end()) return -1;
     else {
@@ -28,23 +28,20 @@ int SesionSet::Size() const{
     return sesion_map.size();
 }
 
-bool SesionSet::Exist(string id_sesion) const{
+bool SesionSet::Exist(const string& id_sesion) const{
     Sesion_map_t::const_iterator it = sesion_map.find(id_sesion);
     return (it != sesion_map.end());
 }
-/*
-Sesion SesionSet::GetSesion(string id_sesion) const {
-    Sesion_map_t::const_iterator it = sesion_map.find(id_sesion);
-    return it->second;
-}
-*/
-int SesionSet::GetNumProblems(string id_sesion){
-     Sesion_map_t::iterator it = sesion_map.find(id_sesion);
+
+
+int SesionSet::GetNumProblems(const string& id_sesion) const{
+     Sesion_map_t::const_iterator it = sesion_map.find(id_sesion);
      return it->second.GetNumProblems();
     
 }
 
-string SesionSet::InsertOnMap(string id_sesion, int i){
+
+string SesionSet::InsertOnMap(const string& id_sesion, int i){
      Sesion_map_t::iterator it = sesion_map.find(id_sesion);
      return it->second.InsertOnMap(i);
 }
@@ -57,7 +54,7 @@ void SesionSet::ListSesionSet() {
     }
 }
 
-int SesionSet::ListSesion(string id_sesion) {
+int SesionSet::ListSesion(const string& id_sesion) {
     Sesion_map_t::const_iterator it = sesion_map.find(id_sesion);
     if (it == sesion_map.end()) return -1;
     else {
@@ -66,9 +63,16 @@ int SesionSet::ListSesion(string id_sesion) {
     return 0;
 }
 
-void SesionSet::InitializeReadyToSendProblems(string id_sesion, ProblemSet& problems) {
+void SesionSet::InitializeReadyToSendProblems(const string& id_sesion, ProblemSet& ReadyToSend, const ProblemSet& Solved) {
     Sesion_map_t::iterator it = sesion_map.find(id_sesion);
-    it->second.InitializeReadyToSendProblems(problems);
+    it->second.InitializeReadyToSendProblems(ReadyToSend, Solved);
 }
+
+void SesionSet::UpdateReadyToSendProblems(string id_sesion, ProblemSet& ReadyToSend, const ProblemSet& Solved, const string& id_problema) {
+    Sesion_map_t::iterator it = sesion_map.find(id_sesion);
+    it->second.UpdateReadyToSendProblems(ReadyToSend, Solved, id_problema);
+}
+
+
 
 

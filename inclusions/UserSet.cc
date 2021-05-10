@@ -19,7 +19,7 @@ void UserSet::ListUserSet() {
     }
 }
     
-int  UserSet::ListUser(string id_user) {
+int  UserSet::ListUser(const string& id_user) {
     User_map_t::const_iterator it = user_map.find(id_user);
     if (it == user_map.end()) return -1;
     else {
@@ -32,12 +32,12 @@ int UserSet::Size()const {
     return user_map.size();
 }
 
-bool UserSet::Exist(string id_user) const{
+bool UserSet::Exist(const string& id_user) const{
     User_map_t::const_iterator it = user_map.find(id_user);
     return (it != user_map.end());
 }
 
-int UserSet::Add(string id_user) {
+int UserSet::Add(const string& id_user) {
     if (Exist(id_user)) {
         return -1;
     }
@@ -47,31 +47,32 @@ int UserSet::Add(string id_user) {
     return 0;
 }
 
-void UserSet::Delete(string id_user) {
+void UserSet::Delete(const string& id_user) {
     user_map.erase(id_user);
 }
 
-int UserSet::GetCurso(string id_user) const{
+int UserSet::GetCurso(const string& id_user) const{
     User_map_t::const_iterator it = user_map.find(id_user);
     return it->second.GetCurso();
 }
 
-void UserSet::JoinCourse(string id_user, int id_course) {
-     User_map_t::iterator it = user_map.find(id_user);
-     it->second.JoinCourse(id_course);
-}
-
-void UserSet::InitializeReadyToSendProblems(string id_user, int id_course, CourseSet& cursos, SesionSet& sesiones) {
+void UserSet::JoinCourse(const string& id_user, int id_course, CourseSet& cursos, SesionSet& sesiones) {
     User_map_t::iterator it = user_map.find(id_user);
-    it->second.InitializeReadyToSendProblems(id_course, cursos, sesiones);
+    it->second.JoinCourse(id_course, cursos, sesiones);
 }
 
-void UserSet::ListSolvedProblems(string id_user) {
+
+void UserSet::ListSolvedProblems(const string& id_user) {
      User_map_t::iterator it = user_map.find(id_user);
      it->second.ListSolvedProblems();
 }
 
-void UserSet::ListReadyToSendProblems(string id_user) {
+void UserSet::ListReadyToSendProblems(const string& id_user) {
     User_map_t::iterator it = user_map.find(id_user);
     it->second.ListReadyToSendProblems();
+}
+
+void UserSet::Update (const string& id_user, string id_problem, int r, ProblemSet& problemas, SesionSet& sesiones, CourseSet& cursos) {
+    User_map_t::iterator it = user_map.find(id_user);
+    it->second.Update(id_problem, r, problemas, sesiones, cursos);
 }

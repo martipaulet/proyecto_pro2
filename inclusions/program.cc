@@ -15,9 +15,9 @@
 #endif
 
 
-#include "ProblemSet.hh"
-#include "SesionSet.hh"
-#include "CourseSet.hh"
+//#include "ProblemSet.hh"
+//#include "SesionSet.hh"
+//#include "CourseSet.hh"
 #include "UserSet.hh"
 
 using namespace std;
@@ -140,7 +140,7 @@ int main() {
                         // - Si en el nuevo curso hay intersección de problemas entre sesiones, no se creará el curso. Retornará -1
                         // - Si no hay intersección de problemas entre sesiones, se creará el curso. Dentro del curso rellenaremos el curso_sesion_map, con key id_problema(string), y value id_sesion(string). 
                         //      Después de añadirlo, el identificador del curso será cursos.Size(). Retornará 0 (Ok)
-                        cout << "error: al introducir el curso" << endl;
+                        cout << "error: curso mal formado" << endl;
                     else   
                         cout << cursos.Size() << endl;
                     break;   
@@ -166,9 +166,6 @@ int main() {
                         if (i != 0) {
                             cursos.DecreaseNumUsersIn(i);
                         }
-                        //borrar todo lo referente al usuario. Si luego se da de alta un usuario con el mismo id es como si el anterior no hubiese existido.
-                        // Tener en cuenta que si el usuario está inscrito en un curso (variable curso_incrito != 0), se ha de decrementar el número de usuarios inscritos del curso 
-                        // con id=curso_inscrito (cursos.DecNumUsersIn(curso_inscrito)) 
                         cout << usuarios.Size() << endl; 
                     }
                     break;
@@ -186,11 +183,7 @@ int main() {
                         cout << "error: usuario inscrito en otro curso"<< endl;
                     }
                     else {
-                        usuarios.JoinCourse(u,c);
-                        cursos.IncreaseNumUsersIn(c);
-                        usuarios.InitializeReadyToSendProblems(u, c, cursos, sesiones);
-                        // Se creará user_problem_map[id_problema]= struct con 3 campos: problemas_resueltos=0, problemas_enviables a true aquellos que sean raiz del árbol, envios_totales=0
-                        cout << cursos.GetNumUsersIn(c) << endl;
+                        usuarios.JoinCourse(u, c, cursos, sesiones);
                     }
                     break;
                     
@@ -250,6 +243,31 @@ int main() {
                         usuarios.ListReadyToSendProblems(u);
                     }
                     break;
+                
+                    
+                case ENVIO:
+                    int r;
+                    cin >> u >> p >> r;
+                    cout << "#" << comando << " " << u << " " << p << " " << r << endl;
+                    // r valdrá 1 si el problema se ha resuelto (éxito) o 0 en caso contrario (fallo)
+                    // usuarios.Update: El usuario u ha de estar definido. El problema p ha de estar definido para el usuario u y ha de constar como enviable. 
+                    // Si r vale 1: 
+                    //  - Estadisticas User: Se traspasará p de ReadyToSendProblems a SolvedProblems(se han de conservar los datos de p), teniendo en cuenta que en p se ha de incrementar enviostotales (si envios_totales pasa a valer 1, se 
+                    //     incrementara el num_problemas_intentados) y envios_exito, actualizando el ratio.
+                    //     Se comprobará si todos los problemas de curso_incrito constan como Solved, y en ese caso curso_inscrito se escribirá a 0. 
+                    //     usuarios.Update llamará a cursos.Update con el curso del usuario u antes de poner curso_inscrito a 0.
+                    //     Se incrementará la variable enviostotales dentro del usuario
+                    //  - Estadísticas Problem: Se incrementará la variable enviostotales, enviosexito, y se actualizará el ratio.
+                    //  - Estadísticas curso: Se decrementará la variable num_usuarios_inscritos y se incrementará la variable num_usuarios_completados si curso_inscrito=0.
+                    
+                    // Si r vale 0: 
+                    //  - Estadisticas User: Dentro de p, se ha de incrementar envios_totales (si envios_totales pasa a valer 1, se incrementara el num_problemas_intentados), actualizando el ratio.
+                    //     Se incrementará la variable enviostotales dentro del usuario                    
+                    //  - Estadísticas Problem: Se incrementará la variable enviostotales, y se actualizará el ratio.
+          
+                    usuarios.Update(u, p, r, problemas, sesiones, cursos);
+                    break;
+                
                     
                 case LISTAR_PROBLEMAS:
                     cout << "#" << comando << endl;
@@ -315,33 +333,4 @@ int main() {
             }
         }
     }
-
- /*              
-               
-                    
-    
-                case ENVIO:
-                    int r;
-                    cin >> u >> p >> r;
-                    // r valdrá 1 si el problema se ha resuelto (éxito) o 0 en caso contrario (fallo)
-                    // usuarios.Update: El usuario u ha de estar definido. El problema p ha de estar definido para el usuario u y ha de constar como enviable. 
-                    // Si r vale 1: 
-                    //  - Estadisticas User: Se traspasará p de ReadyToSendProblems a SolvedProblems(se han de conservar los datos de p), teniendo en cuenta que en p se ha de incrementar enviostotales (si envios_totales pasa a valer 1, se 
-                    //     incrementara el num_problemas_intentados) y envios_exito, actualizando el ratio.
-                    //     Se comprobará si todos los problemas de curso_incrito constan como Solved, y en ese caso curso_inscrito se escribirá a 0. 
-                    //     usuarios.Update llamará a cursos.Update con el curso del usuario u antes de poner curso_inscrito a 0.
-                    //     Se incrementará la variable enviostotales dentro del usuario
-                    //  - Estadísticas Problem: Se incrementará la variable enviostotales, enviosexito, y se actualizará el ratio.
-                    //  - Estadísticas curso: Se decrementará la variable num_usuarios_inscritos y se incrementará la variable num_usuarios_completados si curso_inscrito=0.
-                    
-                    // Si r vale 0: 
-                    //  - Estadisticas User: Dentro de p, se ha de incrementar envios_totales (si envios_totales pasa a valer 1, se incrementara el num_problemas_intentados), actualizando el ratio.
-                    //     Se incrementará la variable enviostotales dentro del usuario                    
-                    //  - Estadísticas Problem: Se incrementará la variable enviostotales, y se actualizará el ratio.
-          
-                    usuarios.Update(u, p, r);
-                    problemas.Update(p, r);
-                    break;
-                    
-    */
 }

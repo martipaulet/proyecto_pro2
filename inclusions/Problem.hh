@@ -26,7 +26,7 @@ public:
         \pre El string id_problema no es vacío.
         \post El resultado es un problema nuevo con identificador = id_problema.
     */
-    Problem(string id_problema); //DONE
+    Problem(const string id_problema); //DONE
     
     
     

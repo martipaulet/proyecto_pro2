@@ -29,7 +29,7 @@ public:
         \pre <em>El string id_user no es vacío.</em>
         \post El resultado es un usuario con id = id_user, con envios_totales = 0, num_problemas_intentados = 0 y curso_inscrito = 0. Los ProblemSet ProblemsSolved y ProblemsReadyToSend estarán vacíos. 
     */
-    User(string id_user);
+    User(const string id_user);
     
     
     
@@ -87,10 +87,15 @@ public:
         \pre <em>Cierto.</em>
         \post Se modificará el curso_inscrito del parámetro implícito.
     */
-    void JoinCourse(int id_curso); //DONE
+    void JoinCourse(int id_course, CourseSet& cursos, SesionSet& sesiones); //DONE
     
+
     void InitializeReadyToSendProblems(int id_course, CourseSet& cursos, SesionSet& sesiones);
     
+    //void UpdateReadyToSendProblems(int id_course, CourseSet& cursos, SesionSet& sesiones, string id_problema);
+    
+    
+    void Update (const string& id_problem, int r, ProblemSet& problemas, SesionSet& sesiones, CourseSet& cursos);
     
     
     //Escritura

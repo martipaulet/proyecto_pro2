@@ -9,7 +9,7 @@ ProblemSet::ProblemSet() {
 
 //Consultoras
 
-bool ProblemSet::Exist(string id_problema) const{
+bool ProblemSet::Exist(const string& id_problema) const{
     Problem_map_t::const_iterator it = problem_map.find(id_problema);
     if (it != problem_map.end()) return true;
     return false;
@@ -19,16 +19,21 @@ int ProblemSet::Size() const{
     return problem_map.size();
 }
 
-/*
-Problem ProblemSet::GetProblem(string id_problema) const {
+
+Problem ProblemSet::GetProblem(const string& id_problema) const {
     Problem_map_t::const_iterator it = problem_map.find(id_problema);
     return it->second;
 }
-*/
+
+
+int ProblemSet::GetTotalSends(const string& id_problema) const {
+    Problem_map_t::const_iterator it = problem_map.find(id_problema);
+    return it->second.GetEnviosTotales();
+}
 
 //Modificadoras
 
-int ProblemSet::Add(string id_problema){
+int ProblemSet::Add(const string& id_problema) {
     Problem_map_t::iterator it = problem_map.find(id_problema);
     if (it != problem_map.end()) return -1;
     else {
@@ -37,14 +42,25 @@ int ProblemSet::Add(string id_problema){
     return 0;
 }
 
-void ProblemSet::IncreaseTotalSends(string id_problema){
+void ProblemSet::AddToUserMap(Problem& problem) {
+    string aux = problem.GetProblemId();
+    problem_map.insert(make_pair(aux, problem));
+}
+
+void ProblemSet::Delete(const string& id_problema){
+    Problem_map_t::iterator it = problem_map.find(id_problema);
+    problem_map.erase(it);
+}
+
+
+void ProblemSet::IncreaseTotalSends(const string& id_problema){
     Problem_map_t::iterator it = problem_map.find(id_problema);
     if (it != problem_map.end()) {
         it->second.IncreaseTotalSends();
     }
 }
 
-void ProblemSet::IncreaseSolvedSends(string id_problema){
+void ProblemSet::IncreaseSolvedSends(const string& id_problema){
     Problem_map_t::iterator it = problem_map.find(id_problema);
     if (it != problem_map.end()) {
         it->second.IncreaseSolvedSends();
@@ -71,7 +87,7 @@ struct Key{
     
 bool Key::operator<(const Key& a) const{
     if (ratio == a.ratio) return id < a.id;
-    else return ratio > a.ratio;
+    else return ratio < a.ratio;
 }
 
 void ProblemSet::ListProblemSetByRatio() { 
@@ -93,7 +109,7 @@ void ProblemSet::ListProblemSet() {
     }
 }
 
-int ProblemSet::ListProblem(string id_problema) {
+int ProblemSet::ListProblem(const string& id_problema) {
     Problem_map_t::const_iterator it = problem_map.find(id_problema);
     if (it == problem_map.end()) return -1;
     else {

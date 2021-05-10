@@ -50,16 +50,20 @@ public:
         \pre El problema id_problema no es vacío.
         \post Devuelve la sesión en la que se encuentra el problema con id = id_problema en el parametro implícito.
     */
-    void ProblemSesion(string id_problema);
+    void ProblemSesion(const string& id_problema);
     
     
-    bool ExistProblem(string id_problema) const;
+    
+    
+    bool ExistProblem(const string& id_problema) const;
     
     int GetSesionListSize() const;  //DONE
     
     bool Validate(SesionSet& sesiones);
     
     void Read();
+    
+    void Initialize_map(SesionSet& sesiones);
     
     
     //Modificadoras
@@ -81,8 +85,10 @@ public:
         \post Se decrementará el número de usuarios inscritos (actualmente) en  el parámetro implícito.
     */
     void DecreaseNumUsersIn();  //DONE
-        
-    void InitializeReadyToSendProblems(SesionSet& sesiones,ProblemSet& problems);
+    
+    void InitializeReadyToSendProblems(SesionSet& sesiones, ProblemSet& ReadyToSend, const ProblemSet& Solved);
+    
+    void UpdateReadyToSendProblems(SesionSet& sesiones, ProblemSet& ReadyToSend, const ProblemSet& Solved, const string& id_problem);
 
     //Escritura
     
@@ -91,6 +97,13 @@ public:
         \post Se han escrito los atributos (num_usuarios_completados, num_usuarios_inscritos, num_sesiones + id_sesiones de estas en el orden que se creó el curso) del parametro implícito con identificador = id_course en el canal estandar de salida. 
     */
     void PrintCourse(int id_course) const;
+    
+        
+    /** @brief Operación de escritura.
+        \pre <em>Cierto.</em>
+        \post Se han escrito los strings de la lista Course_sesion_list del parametro implícito en el canal estandar de salida. 
+    */
+    void PrintCourseSesionList() const; //DONE
     
 
 
@@ -108,19 +121,14 @@ private:
         \pre <em>Existe la sesion con id = id_sesion.</em>
         \post Se añade la sesion con id = id_sesion en la lista Course_sesion_list del parametro implícito. 
     */
-    void InsertOnList(string id_sesion);    //DONE
+    void InsertOnList(const string& id_sesion);    //DONE
     
     /** @brief Constructora del mapa Course_sesion_map del curso.
         \pre <em>Existe la sesion ses.</em>
         \post Se añade al mapa los problemas como key de la sesion ses (valor). 
     */
-    bool InsertOnMap(string id_sesion, SesionSet& sesiones, bool& valido);
-    
-    /** @brief Operación de escritura.
-        \pre <em>Cierto.</em>
-        \post Se han escrito los strings de la lista Course_sesion_list del parametro implícito en el canal estandar de salida. 
-    */
-    static void PrintCourseSesionList(const list<string>& Course_sesion_list); //DONE
+    bool InsertOnMap(const string& id_sesion, SesionSet& sesiones, bool& valido) ;
+
     
 
 };

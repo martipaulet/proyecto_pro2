@@ -39,7 +39,7 @@ public:
         \pre El string id_problema no es vacío.
         \post Devuelve un booleano conforme si existe el problema con id = id_problema en el parámetro implícito. True si existe y false en caso contrario.
     */
-    bool Exist(string id_problema) const;   //DONE
+    bool Exist(const string& id_problema) const;   //DONE
     
     /** @brief Consultora del tamaño del conjunto.
         \pre <em>Cierto.</em>
@@ -52,37 +52,16 @@ public:
         \pre <em>El problema con id_problem existe.</em>
         \post Se devuelve el problema con id = id_problem.
     */
-   // Problem GetProblem(string id_problem) const;
+    Problem GetProblem(const string& id_problem) const;
     
-    
-    
-    /** @brief Consultora del identificador del problema.
-        \pre El string id_problema no es vacío y el problema con id = id_problema existe.
-        \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna el id de este.
-    */
-    //string GetProblemId(string id_problema) const;
     
     /** @brief Consultora de los envios totales.
         \pre El string id_problema no es vacío y el problema con id = id_problema existe.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna los envios_totales de este.
     */
-    //int GetEnviosTotales(string id_problema) const;
-    
-    /** @brief Consultora de los envios exito.
-        \pre El string id_problema no es vacío y el problema con id = id_problema existe.
-        \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna los envios_exito de este.
-    */
-    //int GetEnviosExito(string id_problema) const;
-    
-    /** @brief Consultora del ratio.
-        \pre El string id_problema no es vacío y el problema con id = id_problema existe.
-        \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra retorna el ratio de este.
-    */
-    //double GetRatio(string id_problema) const;
+    int GetTotalSends(const string& id_problema) const;
     
 
-    
-    
     
 
     
@@ -92,9 +71,16 @@ public:
         \pre El string id_problema no es vacio.
         \post Si el id_problema no estaba en el parámetro implícito, lo introduce y retorna 0. En caso que ya existiera retorna -1.
     */
-    int Add(string id_problema);    //DONE
+    int Add(const string& id_problema);    //DONE
     
-        
+    void AddToUserMap(Problem& problem);
+    
+    
+    void Delete(const string& id_problema);
+    
+
+
+    
     /** @brief Actualiza el problema. 
         \pre El problema con id = id_problema existe y r = 0 (fallo) o r = 1 (aCierto). (r es la información del envio de un problema).
         \post Si r vale 1:
@@ -102,19 +88,19 @@ public:
             Si r vale 0:
                 - Se incrementará la variable enviostotales, y se actualizará el ratio del problema con id = id_problema del parámetro implícito.
     */
-    void Update (string id_problema, int r);
+    void Update (const string& id_problema, int r);
     
     /** @brief Modificadora de envios_totales (y ratio).
         \pre El string id_problema no es vacio.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra incrementa los envios totales y el ratio del problema con id = id_problema del parámetro ímplicito.
     */
-    void IncreaseTotalSends(string id_problema);    //DONE
+    void IncreaseTotalSends(const string& id_problema);    //DONE
     
     /** @brief Modificadora de envios_exito (y ratio).
         \pre El string id_problema no es vacio.
         \post Busca en el parámetro implícito el problema con id = id_problema y si lo encuentra incrementaa los envios_exito, los envios_totales y el ratio del problema con id = id_problema del parámetro ímplicito.
     */
-    void IncreaseSolvedSends(string id_problema);   //DONE
+    void IncreaseSolvedSends(const string& id_problema);   //DONE
     
     
     
@@ -143,7 +129,7 @@ public:
         \pre El string id_problema no es vacío.
         \post Si el problema con id = id_problema del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (envios_totales, envios_exito, ratio) de este. Retornará -1 en caso contrario.
     */
-    int ListProblem(string id_problema);    //DONE
+    int ListProblem(const string& id_problema);    //DONE
     
     void ListUserProblem() const;
     

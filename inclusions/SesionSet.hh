@@ -6,7 +6,7 @@
 #define _SESIONSET_HH
 
 #include "Sesion.hh"
-#include "ProblemSet.hh"
+//#include "ProblemSet.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
@@ -44,36 +44,14 @@ public:
         \pre El string id_sesion no es vacío.
         \post Devuelve un booleano conforme si existe la sesion con id = id_sesion en el parámetro implícito. True si existe y false en caso contrario.
     */
-    bool Exist(string id_sesion) const;     //DONE
-    
-    
-       
-    /** @brief Consultora de la sesion con id = id_sesion del conjunto.
-        \pre <em>La sesion con id_sesion existe.</em>
-        \post Se devuelve la sesion con id = id_sesion.
-    */
-    //Sesion GetSesion(string id_sesion) const;
-    
-    
-    
-    
-    /** @brief Consultora del identificador de la sesión.
-        \pre El string id_sesion no es vacío.
-        \post Busca en el parámetro implícito la sesión con id = id_sesion y si la encuentra retorna el id de esta.
-    */
-    //string GetSesionId(string id_sesion) const;
+    bool Exist(const string& id_sesion) const;     //DONE
     
     /** @brief Consultora del número de problemas.
         \pre El string id_sesion no es vacío.
         \post Busca en el parámetro implícito la sesión con id = id_sesion y si la encuentra retorna el número de problemas de esta.
     */
-    int GetNumProblems(string id_sesion);
+    int GetNumProblems(const string& id_sesion) const ;
     
-    /** @brief Consultora del BinTree de la sesión.
-        \pre El string id_sesion no es vacío.
-        \post Busca en el parámetro implícito la sesión con id = id_sesion y si la encuentra retorna los id de los problemas (siguiendo la estructura en postorden) de esta.
-    */
-    //void GetProblemsId(string id_sesion) const;
     
     
     //Modificadoras
@@ -83,7 +61,7 @@ public:
         \post Si el id_sesion ya estaba en el parámetro implícito, pedirá los id_problemas pero no creará el BinTree ya que esta sesión será desechada. Retornará -1.
                 si el id_sesion no existia en el parámetro implícito, pedirá los id_problemas para construir el BinTree respectivo. Retornará 0 (OK).
     */
-    int AddOneFromConsole(string id_sesion);    //DONE
+    int AddOneFromConsole(const string& id_sesion);    //DONE
     
     
     /** @brief Creadora del BinTree de problemas.
@@ -92,15 +70,19 @@ public:
     */
     //void MakeBinTree(string id_sesion);
     
-    void InitializeReadyToSendProblems(string id_sesion, ProblemSet& problems);
+    
+    void InitializeReadyToSendProblems(const string& id_sesion, ProblemSet& ReadyToSend, const ProblemSet& Solved);
+    
+    
+    void UpdateReadyToSendProblems(string id_sesion, ProblemSet& ReadyToSend, const ProblemSet& Solved, const string& id_problema);
     
     
     
     
-    string InsertOnMap(string id_sesion, int i);
+    string InsertOnMap(const string& id_sesion, int i);
     
     
-    
+    void Initialize_map(const string& id_sesion);
 
     
     
@@ -123,7 +105,7 @@ public:
         \pre El string id_sesion no es vacío.
         \post Si la sesión con id = id_sesion del parámetro implícito existe, retornará 0 y se escribirá por el canal estandar de salida los atributos (num_problemas + id de dichos problemas) de esta. Retornará -1 en caso contrario.
     */
-    int ListSesion(string id_sesion);  //DONE
+    int ListSesion(const string& id_sesion);  //DONE
     
     
     /** @brief Operación de escritura.

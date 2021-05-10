@@ -7,7 +7,7 @@
 
 //Constructora
 
-Problem::Problem(string id_problema) {
+Problem::Problem(const string id_problema) {
     id = id_problema;
     envios_totales = 0;
     envios_exito = 0;
@@ -43,13 +43,14 @@ double Problem::GetRatio() const{
     
 void Problem::IncreaseTotalSends(){
     ++envios_totales;
-    ratio = (envios_totales+1)/(envios_exito+1);
+    ratio = (envios_totales+1.0)/(envios_exito+1.0);
 }
 
 
 void Problem::IncreaseSolvedSends(){
+    ++envios_totales;
     ++envios_exito;
-    ratio = (envios_totales+1)/(envios_exito+1);
+    ratio = (envios_totales+1.0)/(envios_exito+1.0);
 }
 
 
